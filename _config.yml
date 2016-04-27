@@ -68,7 +68,7 @@ ga_domain: amx1390.com
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "一个平凡的程序猴子。"
+sidebar-about-description: "一个平凡的程序员，热爱一切美好事物，追求梦想与自由。"
 sidebar-avatar: /img/avatar-zhangxx.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
