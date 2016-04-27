@@ -16,7 +16,7 @@ weibo_username:     2112920937
 zhihu_username:     kang-en-fan
 github_username:    zhangxx0
 #twitter_username:  huxpro
-facebook_username:  huxpro
+facebook_username:  100012003610002
 
 
 
@@ -82,10 +82,10 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
+        title: "Zhangxx",
+        href: "http://amx1390.com"
     },{
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
+        title: "XVM",
+        href: "http://xvm.garphy.com/"
     }
 ]
