@@ -8,7 +8,7 @@ keyword: "张新鑫, Zhangxx, @酷比程序员一条, Zhangxx的博客, Zhangxx 
 url: "http://amx1390.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-
+timezone: CN
 
 # SNS settings
 RSS: false
