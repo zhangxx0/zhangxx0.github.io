@@ -12,8 +12,8 @@ baseurl: ""                             # for example, '/blog' if your blog host
 
 # SNS settings
 RSS: false
-weibo_username:     酷比程序员一条
-zhihu_username:     康恩饭
+weibo_username:     377241804@qq.com
+zhihu_username:     377241804@qq.com
 github_username:    zhangxx0
 #twitter_username:  huxpro
 facebook_username:  huxpro
@@ -87,26 +87,5 @@ friends: [
     },{
         title: "天镶的博客",
         href: "http://lingyu.wang/"
-    },{
-        title: "Luke的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    },{
-        title: "前端神盾局",
-        href: "http://wepiaofei.github.io/blog/"
     }
 ]
