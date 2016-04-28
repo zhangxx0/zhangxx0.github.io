@@ -2,7 +2,7 @@
 layout:     post
 title:      "Markdown学习笔记"
 subtitle:   "工欲善其事，必先利其器"
-date:       2016-04-29 02:42:00
+date:       2016-04-29 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-markdown.jpg"
 catalog: true
