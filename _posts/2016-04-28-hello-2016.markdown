@@ -31,8 +31,12 @@ tags:
 	* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了 
 * Jekyll 的自定制非常容易，基本就是个模版引擎
 
+* 111
+* 222
+* 333
+
 大体的过程：
-* 购买域名，godaddy，花了55￥
+* 购买域名，godaddy，花了55
 * 配置SSH keys
 * NDSpod 绑定
 * 创建zhangxx.github.io 仓库
