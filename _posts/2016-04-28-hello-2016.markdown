@@ -24,49 +24,44 @@ tags:
 ## 正文
 
 关于这个博客搭建的简单记录：
-* **Markdown** 带来的优雅写作体验
-* 非常熟悉的 Git workflow ，**Git Commit 即 Blog Post**
-* 利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-	* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了 
-* Jekyll 的自定制非常容易，基本就是个模版引擎
-
 
 大体的过程：
-* 11
-* 22
-* 33
 * 购买域名，godaddy，花了55
 * 配置SSH keys
 * NDSpod 绑定
 * 创建zhangxx.github.io 仓库
 * 绑定Github pages域名 CNAME
-* download [黄玄的模板]()
+* download [黄玄的模板](https://github.com/Huxpro/huxpro.github.io)
 * 开始各种修改模板
 * 各种找图开始美化
 * 开始编写第一篇博文
 
-主要技术：
+
+#### 主要技术：
 [ GitHub Pages ](https://pages.github.com/) + [ Jekyll ](http://jekyllrb.com/)
 
-主要参照
+#### 主要参照
 [如何搭建一个独立博客——简明 Github Pages与 jekyll 教程](http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/) 前半部分参照，后面让去fork他的仓库，我对这种做法很不屑，我总有自主选择的权利，而做为一个教程以这个为主要搭建方式介绍令我感到反感，所以感谢作者的前半部分；
+
 [使用Github Pages建独立博客](http://beiyuu.com/github-pages/)这篇比较实在一些，不过时间有些久了；
 
 
 
-遇到的问题
+####遇到的问题
 
 我是直接download的黄玄的仓库zip，于是就多了个Portfolio的菜单，删除这个菜单弄了半天，没弄明白这个菜单是怎么添加的，
 然后把Portfolio文件夹删了，上传之后还是不行，结果手机访问发现没了，换个浏览器发现也没了，然后回到chrome，刷新一下，
-竟然好了，特么在逗我 *-*
+竟然好了，特么在逗我 
 
 
-TODO
-* 修复评论
-* 修复分享
-* 百度统计不好用
+#### TODO
+
+- []修复评论
+- []修复分享
+- []百度统计不好用
 * 谷歌的统计貌似好用了
 * 其余还未发现的问题
+
 
 ## 后记
 
