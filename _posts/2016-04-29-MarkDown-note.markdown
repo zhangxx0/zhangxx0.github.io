@@ -16,6 +16,7 @@ tags:
 Markdown 是一种「电子邮件」风格的「标记语言」
 
 参考文章：
+
 [献给写作者的MarkDown新手指南](http://www.jianshu.com/p/q81RER)
 [MarkDown语法说明](http://wowubuntu.com/markdown/)
 [认识与入门 Markdown](http://sspai.com/25137)
@@ -26,10 +27,15 @@ MarkPad 可以直接new jekyll page文档
 # 标题
 
 # 一级标题
+
 ## 二级标题
+
 ### 三级标题
+
 #### 四级标题
+
 ##### 五级标题
+
 ###### 六级标题
 
 *注：# 和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。*
@@ -37,7 +43,9 @@ MarkPad 可以直接new jekyll page文档
 # 列表
 
 ## 无序
+
 两种写法
+
 - 文本1
 - 文本2
 - 文本3
@@ -71,8 +79,11 @@ MarkPad 可以直接new jekyll page文档
 > 一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。
 
 > 床前明月光
+
 > 疑是地上霜
+
 > 举头望明月
+
 > 低头思故乡
 
 *注：>和文本之间要保留一个字符的空格*
@@ -146,7 +157,7 @@ PS：谁能够提供一个完整的Markdown可以渲染的语言列表啊，比�
 
 
 
-使用代码高亮的例子如下:
+使用代码高亮的例子如下（rouge的写法）:
 {% highlight ruby %}
 def foo
   puts 'foo'
@@ -190,6 +201,7 @@ React     : 直接用 JS 就好啦 :)
 \*literal asterisks\*
 
 Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号:
+
 - \ 反斜线
 - ` 反引号
 - * 星号
