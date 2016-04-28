@@ -50,6 +50,10 @@ tags:
 
 这篇比较实在一些，不过时间有些久了；
 
+[一步步在GitHub上创建博客主页-最新版](http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html)
+
+模板使用与语法高亮等；
+
 
 
 #### 遇到的问题
