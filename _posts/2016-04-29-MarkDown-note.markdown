@@ -2,7 +2,7 @@
 layout:     post
 title:      "Markdown学习笔记"
 subtitle:   "工欲善其事，必先利其器"
-date:       2016-04-28 00:00:00
+date:       2016-04-29 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-markdown.jpg"
 catalog: true
@@ -74,7 +74,7 @@ MarkPad 可以直接new jekyll page文档
 ---
 
 
-#引用
+# 引用
 
 > 一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。
 
