@@ -2,7 +2,7 @@
 layout:     post
 title:      "WOTPlus(1) - 由来"
 subtitle:   "风暴降生的WOTPlus"
-date:       2016-04-30 00:00:00
+date:       2016-04-29 03:00:00
 author:     "Zhangxx"
 header-img: "img/post-wotplus-one.jpg"
 catalog: true
