@@ -240,3 +240,26 @@ Kant 给你发了一个红包
 
 —— Zhangxx 完成于 2016年4月29日02:40:40
 查找rouge支持的语言花了一些时间；
+
+
+# 补充
+
+## Github Flavored Markdown
+
+参考： [Github Flavored Markdown介绍](http://www.jianshu.com/p/cfPxyr)
+
+也就是 **GFM**
+
+### 换行  
+标准MD要在一行的最后加两个空格符才表示换行，否则是不换行的。但是GFM则没有此要求。  
+
+第一行（最后无两个空格）
+第二行
+
+### 任务列表  
+GFM支持把列表变成带勾选框的任务列表，只需要修改列表前序号的格式为- [ ]或者- [1]
+
+2016年4月29日23:26:40 by zhangxx
+
+
+

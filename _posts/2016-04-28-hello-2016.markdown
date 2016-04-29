@@ -27,7 +27,7 @@ tags:
 
 大体的过程
 
-* 购买域名，godaddy，花了55
+* 购买域名，godaddy，花了55￥
 * 配置SSH keys
 * NDSpod 绑定
 * 创建zhangxx.github.io 仓库
@@ -40,6 +40,14 @@ tags:
 
 #### 主要技术：
 [ GitHub Pages ](https://pages.github.com/) + [ Jekyll ](http://jekyllrb.com/)
+
+其他：
+
+* 多说评论与分享插件；
+* 百度站长统计；
+* 谷歌统计（信息全，包括ip、城市等）；
+* DNS绑定；
+* [ico的制作](http://www.faviconer.com/)
 
 #### 主要参照
 [如何搭建一个独立博客——简明 Github Pages与 jekyll 教程](http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/)  
@@ -55,7 +63,6 @@ tags:
 模板使用与语法高亮等；
 
 
-
 #### 遇到的问题
 
 我是直接download的黄玄的仓库zip，于是就多了个Portfolio的菜单，删除这个菜单弄了半天，没弄明白这个菜单是怎么添加的，
@@ -65,13 +72,15 @@ tags:
 
 #### TODO
 
-- [ ] 修复评论
-- [ ] 修复分享
-- [ ] 百度统计不好用
+- [1] 修复评论
+- [1] 修复分享
+- [1] 百度统计不好用
 
 * 谷歌的统计貌似好用了
 * 其余还未发现的问题
 
+添加多说账号之后，评论与分享恢复正常；
+百度统计第二天后正常；
 
 ## 后记
 
