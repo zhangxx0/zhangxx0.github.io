@@ -63,7 +63,7 @@ WOTPlus遵循 **Material Design** 设计原则，使用最新的控件，诸如�
 
 ## 版本更新
 
-Fir.im（内测）: http://fir.im/wotplus  
+Fir.im（内测）: [http://fir.im/wotplus](http://fir.im/wotplus)  
 豌豆荚：待上架；  
 魅族应用中心：待上架；
 
