@@ -1,8 +1,7 @@
-#Hux Blog
+#Zhangxx Blog
 
-###[View Live Hux Blog &rarr;](http://huxpro.github.io)
+###[View Zhangxx Blog &rarr;](http://amx1390.com)
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
 
 
 ### "Page Build Warning" email
