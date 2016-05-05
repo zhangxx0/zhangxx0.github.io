@@ -28,6 +28,7 @@ tags:
 
 放大动画动画效果代码：
 ```
+
 iv_begin.setImageResource(R.mipmap.begin);
 
 final ScaleAnimation scaleAnim = new ScaleAnimation(1.0f, 1.2f, 1.0f, 1.2f,
@@ -51,6 +52,7 @@ scaleAnim.setAnimationListener(new Animation.AnimationListener() {
     }
 });
 iv_begin.startAnimation(scaleAnim);
+
 ```
 
 实现的效果图（*我先学习下怎么制作gif*）：
@@ -67,7 +69,7 @@ iv_begin.startAnimation(scaleAnim);
 使用侧滑菜单罗列功能模块；  
 ![ 侧滑菜单图 ](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_bolg_01_01.png)
 
-** Navigation的图标问题 ** ：  
+**Navigation的图标问题**   
 全部取自 Google 的 [**Material icans**](https://design.google.com/icons/)，免去了自己找或者自己画的痛苦，当然我也不会画，，，
 
 然后开始写首页的UI，首页是一个Card的RecyclerView，所以先写了几个静态的CardView：  
@@ -98,6 +100,9 @@ jsoup的官方文档：[jsoup: Java HTML Parser](http://www.open-open.com/jsoup/
 [使用jsoup解析HTML之获取html源码的几种方法](https://liuzhichao.com/p/1490.html)  
 
 （*2016年5月5日22:47:20 今天先写到这里；*）
+
 #### 概要信息抽取
+
 #### 军团信息获取
+
 #### 抽取成就信息
