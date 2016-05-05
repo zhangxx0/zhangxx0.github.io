@@ -2,7 +2,7 @@
 layout:     post
 title:      "WOTPlus(2) - 开发_0"
 subtitle:   "WOTPlus开发历程_0"
-date:       2016-05-05 22:00:00
+date:       2016-05-04 22:00:00
 author:     "Zhangxx"
 header-img: "img/post-wotplus-three.jpg"
 catalog: true
