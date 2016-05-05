@@ -26,11 +26,10 @@ tags:
 
 ### 启动页
 
-放大动画动画效果代码：
+放大动画动画效果代码
+
 ```
-
 iv_begin.setImageResource(R.mipmap.begin);
-
 final ScaleAnimation scaleAnim = new ScaleAnimation(1.0f, 1.2f, 1.0f, 1.2f,
         Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
         0.5f);
