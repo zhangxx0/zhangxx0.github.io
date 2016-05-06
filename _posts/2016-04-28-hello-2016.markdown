@@ -48,6 +48,7 @@ tags:
 * 谷歌统计（信息全，包括ip、城市等）；
 * DNS绑定；
 * [ico的制作](http://www.faviconer.com/)
+* 七牛云存储图床
 
 #### 主要参照
 [如何搭建一个独立博客——简明 Github Pages与 jekyll 教程](http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/)  
