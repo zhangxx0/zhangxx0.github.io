@@ -22,7 +22,7 @@ tags:
 
 ## 截图
 
-_ _ _ 
+_ _ _
 
 ![](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_xiaoguo2.jpg)
 ![](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_xiaoguo1.jpg)
@@ -100,15 +100,13 @@ _ _ _
 然而，作者也是有一颗拯救世界的心的！  
 想深入了解作者的可以戳这个：[ Zhangxx的博客 | 关于 ](http://amx1390.com/about/)  
 
+微博：[http://weibo.com/2112920937](http://weibo.com/2112920937)  
+个人博客：[http://amx1390.com](http://amx1390.com)  
+
+
 差点忘了，土豪要是想打赏我的话，可以扫下面的支付宝(不说了，先去搬砖了)：
 ![ Zhangxx的支付宝 ](http://7xti0t.com2.z0.glb.clouddn.com/zhifubao)
 
 
 2016年4月30日23:15:18 by [zhangxx](http://amx1390.com)
 2016年5月6日22:17:40 update  
-
-
-
-
- 
- 
