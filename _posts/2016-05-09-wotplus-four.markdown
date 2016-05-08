@@ -4,7 +4,7 @@ title:      "WOTPlus(N) - 上线记录"
 subtitle:   "WOTPlus Fury Road"
 date:       2016-05-08 02:00:00
 author:     "Zhangxx"
-header-img: "img/post-wotplus-four.jpg"
+header-img: "img/post-wotplus-four.png"
 catalog: true
 tags:
     - WOTPlus
