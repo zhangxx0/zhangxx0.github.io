@@ -102,3 +102,10 @@ tags:
 
 转眼已经上线一周了，是一个小的阶段了；
 这样的总计有：**2532**；实际数量应该大于这个值，下载量继续下降；
+
+## 一周下载情况统计  
+
+![WOTPlus一周下载总量趋势](http://7xsvfv.com1.z0.glb.clouddn.com/WOTPlus%E4%B8%80%E5%91%A8%E4%B8%8B%E8%BD%BD%E6%80%BB%E9%87%8F%E8%B6%8B%E5%8A%BF.png)  
+![WOTPlus各平台一周下载量](http://7xsvfv.com1.z0.glb.clouddn.com/WOTPlus%E5%90%84%E5%B9%B3%E5%8F%B0%E4%B8%80%E5%91%A8%E4%B8%8B%E8%BD%BD%E9%87%8F.png)  
+![WOTPlus一周日下载总量趋势](http://7xsvfv.com1.z0.glb.clouddn.com/WOTPlus%E4%B8%80%E5%91%A8%E6%97%A5%E4%B8%8B%E8%BD%BD%E6%80%BB%E9%87%8F%E8%B6%8B%E5%8A%BF.png)  
+
