@@ -429,5 +429,7 @@ private Handler handler = new Handler() {
 当执行完耗时操作后，这个操作可能是在第二个网络请求后（无军团信息的情况），也有可能是在第三个网络请求之后（有军团信息的情况），调用 `handler.sendEmptyMessage(1);` 方法；
 一开始使用的时候我还犯了个错误，就是在网络请求之后直接调用了 sendEmptyMessage 方法，而解析html的耗时方法还没有执行完，这样就起不到控制异步任务的作用了，因此，应该在所有的耗时方法都执行完毕之后再调用 sendEmptyMessage；  
 
+以上代码具体见：[https://github.com/zhangxx0/WOTPlus](https://github.com/zhangxx0/WOTPlus)
+
 第一篇暂时写到这里，篇幅太长不宜阅读，下一篇继续；
 2016年5月14日21:24:07 by zhang.xx
