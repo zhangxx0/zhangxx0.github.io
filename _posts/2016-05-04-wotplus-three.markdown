@@ -71,6 +71,73 @@ iv_begin.startAnimation(scaleAnim);
 **Navigation的图标问题**   
 全部取自 Google 的 [**Material icans**](https://design.google.com/icons/)，免去了自己找或者自己画的痛苦，当然我也不会画，，，
 
+侧滑的点击事件绑定：  
+
+```
+mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+if (mNavigationView != null) {
+    setupDrawerContent(mNavigationView);
+}
+```
+
+```
+// 侧滑菜单点击事件
+private void setupDrawerContent(final NavigationView navigationView) {
+    navigationView.setNavigationItemSelectedListener(
+            new NavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(MenuItem menuItem) {
+                    menuItem.setChecked(true);
+                    // 改变页面标题，标明导航状态
+                    // 设置和关于两个页面时打开新的页面，不需要修改标题；
+                    mDrawerLayout.closeDrawers();
+                    // 这个地方，点击不同的按钮，应该跳到不同的页面上去；
+                    //  或者是用Fragment将主页的内容展示部分替换掉；
+                    switch (menuItem.getItemId()) {
+                        case R.id.nav_home:
+
+                            setTitle(menuItem.getTitle());
+
+                            // 传递queryFlag,侧滑菜单传递空字符串
+                            Bundle bundle = new Bundle();
+                            bundle.putString(MainFragment.QUERY_FLAG_KEY, "");
+                            MainFragment mainFragment = new MainFragment();
+                            mainFragment.setArguments(bundle);
+
+                            getSupportFragmentManager().beginTransaction().
+                                    setCustomAnimations(R.anim.slide_in_from_right, R.anim.slide_out_to_left).
+                                    replace(R.id.fl_content, mainFragment, "main").
+                                    commit();
+
+                            break;
+                        case R.id.nav_achieve:
+                            break;
+                        case R.id.nav_count:
+                            break;
+                        case R.id.nav_level:
+                            break;
+                        case R.id.nav_vehicle:
+                            break;
+                        case R.id.nav_settings:
+                            Intent intent0 = new Intent(MainActivity.this, AtySetting.class);
+                            intent0.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent0);
+                            break;
+                        case R.id.nav_about:
+                            Intent intent1 = new Intent(MainActivity.this, AtyAbout.class);
+                            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent1);
+                            break;
+                        default:
+                            break;
+                    }
+                    return true;
+                }
+            });
+}
+```
+
+
 然后开始写首页的UI，首页是一个Card的RecyclerView，所以先写了几个静态的CardView：  
 ![两个Card](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_blog_01_02.jpg)  
 
