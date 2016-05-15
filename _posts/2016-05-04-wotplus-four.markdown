@@ -378,6 +378,9 @@ public static DeathWheelProgressDialog createDialog(Context context) {
 
 这个自定义Dialog我感觉是最初级的了，只是修改了Dialog的布局文件，而我的实现方式是在布局文件中展示一个gif图片（一个不停旋转的死亡之轮）；  这个我隐隐中感觉在性能上可能赶不上那种好多图实现一个动画效果的实现方式，但是也说不好差在哪儿，还是需要进一步学习下自定义控件；
 
+我的参照自定义ProgressDialog:  
+[http://blog.csdn.net/rohsuton/article/details/7518031](http://blog.csdn.net/rohsuton/article/details/7518031)
+
 ![死亡之轮](http://7xsvfv.com1.z0.glb.clouddn.com/death-wheel.gif)
 
 布局文件（*使用的在github上找的一个gif开源库*）：  
