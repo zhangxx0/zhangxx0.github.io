@@ -84,6 +84,9 @@ if (mOnItemClickLitener != null)
 
 ## 统计页面 
 
+设计图：  
+![设计图](http://7xsvfv.com1.z0.glb.clouddn.com/badgerecordhanddesign.jpg)
+
 统计页面的数据获取也是在之前的工具方法中完成，不再赘述；
 
 统计页面使用 `StatisticsFragment` 填充，在里面我使用了 `TabLayout` 和 `ViewPager`，并在代码中实现关联 `tabLayout.setupWithViewPager(viewPager);`，这种实现方式比较简便，在页面中实现了两个滑动或者点击切换的页面 **徽章与战绩** 和 **类型与国家**，同样使用两个Fragment来填充，分别为 `BadgeRecordFragment` 和 `TypeCountryFragment`；
@@ -149,6 +152,9 @@ if (mOnItemClickLitener != null)
 ![类型与国家](http://7xsvfv.com1.z0.glb.clouddn.com/typeandcountrypage2.jpg)
 
 ## 等级页面
+
+设计图：  
+![设计图](http://7xsvfv.com1.z0.glb.clouddn.com/gradehanddesign.jpg)
 
 等级页面的数据获取遇到些问题，等级的数据在html中没有**直接显示**的数据，使用的是js的databind的方式，如图：  
 ![等级数据html源码图](http://7xsvfv.com1.z0.glb.clouddn.com/gradedata.png)
