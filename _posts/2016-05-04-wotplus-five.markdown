@@ -208,9 +208,9 @@ nav切换之后，再切换回统计页面时，两个viewpager都为空白；
 第一次点击的时候回调用viewpager内的两个Fragment的createView方法；  
 第二次点击的时候没有调用？？？
 
-看文档：
-     [http://stackoverflow.com/questions/25574234/viewpager-oncreateview-is-not-always-called](http://stackoverflow.com/questions/25574234/viewpager-oncreateview-is-not-always-called)  
-     [http://developer.android.com/intl/zh-cn/reference/android/support/v4/app/FragmentPagerAdapter.html](http://developer.android.com/intl/zh-cn/reference/android/support/v4/app/FragmentPagerAdapter.html)  
+看文档：  
+[http://stackoverflow.com/questions/25574234/viewpager-oncreateview-is-not-always-called](http://stackoverflow.com/questions/25574234/viewpager-oncreateview-is-not-always-called)  
+[http://developer.android.com/intl/zh-cn/reference/android/support/v4/app/FragmentPagerAdapter.html](http://developer.android.com/intl/zh-cn/reference/android/support/v4/app/FragmentPagerAdapter.html)   
 
 ![](http://7xsvfv.com1.z0.glb.clouddn.com/fragmentproblem.png)
 
