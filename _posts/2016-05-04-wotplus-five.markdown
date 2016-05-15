@@ -127,7 +127,9 @@ if (mOnItemClickLitener != null)
 
 关于ScrollView内部空间不能完全填充的问题：
 [http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0704/1629.html](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0704/1629.html)
-     添加属性： `android:fillViewport="true"`  
+
+添加属性： `android:fillViewport="true"`  
+
 ```
 <android.support.v4.widget.NestedScrollView
         android:layout_width="fill_parent"
