@@ -115,7 +115,7 @@ if (mOnItemClickLitener != null)
 </LinearLayout>
 ```
 
-### 徽章与战绩页面
+#### 徽章与战绩页面
 
 这个页面使用了三个 `CardView` 来分别展示：**通用徽章**、**全部战绩**、**战斗统计**，由于太长了，所以一屏是放不下的，一开始使用的是 `ScrollView`，但是不能实现上滑隐藏toolbar的效果，这里我有不想使用 RecyclerView，感觉有点重了，于是又开始了搜索，，，
 
@@ -141,7 +141,7 @@ if (mOnItemClickLitener != null)
 初步效果图：  
 ![徽章与战绩](http://7xsvfv.com1.z0.glb.clouddn.com/badgeandrecordpage2.jpg)
 
-### 类型与国家页面
+#### 类型与国家页面
 
 同样使用 **MPAndroidChart**，不再赘述；
 
