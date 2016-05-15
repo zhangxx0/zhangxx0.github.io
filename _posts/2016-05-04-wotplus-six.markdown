@@ -38,6 +38,8 @@ tags:
 在 `AtyTanks` 的页面文件 `activity_tanks` 中使用了 `CollapsingToolbarLayout` ，其中添加了一个代表各类型的坦克图片，我选的德系比较多，，，谁让我是个德粉呢！  
 在 `AtyTank` 的页面文件 `activity_tank` 中的上半部分使用了 `NestedScrollView` 嵌套 `CardView` 再嵌套 `RecyclerView` 的方式，在可上下滚动的Card里实现了成就列表的左右滚动；  
 
+其他的一些 **逻辑处理** ，如：国旗的处理、坦克成就的图片url拼接、提取勋章的ID与名称对照字段map（坦克成就json中没有成就名字汉字，于是拼装了一个中英文对照的map，此map用于以英文为id提取中文从而设置成就名称）等，不再详细描述，具体可参见代码；  
+
 
  **战车类型列表** 图：  
 ![](http://7xsvfv.com1.z0.glb.clouddn.com/tankpage11.jpg)
