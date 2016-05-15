@@ -89,6 +89,7 @@ if (mOnItemClickLitener != null)
 统计页面使用 `StatisticsFragment` 填充，在里面我使用了 `TabLayout` 和 `ViewPager`，并在代码中实现关联 `tabLayout.setupWithViewPager(viewPager);`，这种实现方式比较简便，在页面中实现了两个滑动或者点击切换的页面 **徽章与战绩** 和 **类型与国家**，同样使用两个Fragment来填充，分别为 `BadgeRecordFragment` 和 `TypeCountryFragment`；
 
 下面是 `StatisticsFragment` 的布局
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
