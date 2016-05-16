@@ -31,7 +31,7 @@ tags:
 
 返回的 json 包括该战车的成就list，和其他的战绩信息； 
 
-**一些技术细节：  **
+**一些技术细节**  
 
 第一个 **战车类型列表** 页面使用的是 `TanksFragment` 填充主页的空白，后两个则是使用的新的 Activity 来实现的，分别为：`AtyTanks` 和 `AtyTank`；  
 `AtyTanks` 中根据 `TANKS_TYPE` 来判断展示的坦克类型名称，名称使用了一个数组来存储：`String[] TANKS_TITLE = {"LT", "MT", "HT", "TD", "SPG"}`，顺序与列表的点击 `position` 对应；  
