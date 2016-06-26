@@ -74,10 +74,10 @@ _ _ _
 由于这个打包换了签名的证书，所以0.6版本的用户在下载新版本0.9并替换安装的时候，可能会出现应用未安装的错误，解决办法是卸载掉0.6版本，重新安装新的0.9版本，以后更新1.0版本的时候就不会出现这个问题了，可以直接替换安装；
 
 * Fir.im：[http://fir.im/WOTPlus](http://fir.im/WOTPlus)
-* 魅族应用中心：[ WOTPlus-魅族应用中心 ](http://app.meizu.com/apps/public/detail?package_name=com.xinxin.wotplus)
 * 应用宝：[ WOTPlus-应用宝](http://android.myapp.com/myapp/detail.htm?apkName=com.xinxin.wotplus)
+* 魅族应用中心：[ WOTPlus-魅族应用中心 ](http://app.meizu.com/apps/public/detail?package_name=com.xinxin.wotplus)
 
-由于是周末，两个应用市场都还没有审核通过；
+由于是周末，魅族应用市场都还没有审核通过，所以魅族商店的还是0.6版本，请魅友先使用其他链接下载，估计明天就能审核通过了；
 
 
 
