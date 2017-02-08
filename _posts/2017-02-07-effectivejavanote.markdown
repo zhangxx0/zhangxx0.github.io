@@ -2,7 +2,7 @@
 layout:     post
 title:      "Effective Java 笔记"
 subtitle:   "问征夫以前路"
-date:       2016-02-07 02:00:00
+date:       2017-02-07 02:00:00
 author:     "zhang.xx"
 header-img: "img/post-xiaozagan-one.png"
 catalog: true
