@@ -11,8 +11,9 @@ tags:
 ---
 
 > If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.
+>                                                                   ——John·Ronald·Reuel·Tolkien
 
-                                         ——John·Ronald·Reuel·Tolkien
+                                         
 
 ##  前言
 ---
