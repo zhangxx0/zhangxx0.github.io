@@ -10,7 +10,9 @@ tags:
     - 猜图
 ---
 
-> 谁言别后终无悔，寒月清宵绮梦回。深知身在情常在，前尘不共彩云飞.
+> If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.
+
+                                         ——John·Ronald·Reuel·Tolkien
 
 ##  前言
 ---
@@ -30,3 +32,20 @@ tags:
 ![](http://otcj7rnd2.bkt.clouddn.com/20170719.jpg)
 
 #### 2017年7月20日
+![](http://otcj7rnd2.bkt.clouddn.com/20170720.jpg)
+
+#### 2017年7月21日
+![](http://otcj7rnd2.bkt.clouddn.com/20170721.jpg)
+
+#### 2017年7月24日
+![](http://otcj7rnd2.bkt.clouddn.com/20170724.jpg)
+
+#### 2017年7月25日
+![](http://otcj7rnd2.bkt.clouddn.com/20170725.jpg)
+
+#### 2017年7月26日
+![](http://otcj7rnd2.bkt.clouddn.com/20170726.jpg)
+
+#### 2017年7月27日
+![](http://otcj7rnd2.bkt.clouddn.com/20170727.jpg)
+
