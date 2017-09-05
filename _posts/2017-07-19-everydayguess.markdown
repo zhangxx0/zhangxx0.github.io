@@ -3,7 +3,7 @@ layout:     post
 title:      "每日猜图"
 subtitle:   "因为珍爱和平，所以回首战争"
 date:       2017-07-20 00:00:00
-author:     "zhang.xx"
+author:     "zhang.xx;SY"
 header-img: "img/post-everydayguess.jpg"
 catalog: true
 tags:
