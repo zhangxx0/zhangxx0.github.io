@@ -12,14 +12,14 @@ tags:
 
 > If more of us valued food and cheer and song above hoarded gold, it would be a merrier world. ——**John·Ronald·Reuel·Tolkien**
 
-                                         
+
 
 
 ---
 
 ##0-前言
 
-Java多线程能满足程序员编写高效率的程序来达到充分利用CPU的目的
+Java多线程能满足程序员编写高效率的程序来达到充分利用 CPU 的目的
 
 ##1-概念
 
@@ -94,7 +94,7 @@ class MyThread2 implements Runnable {
 
 ```
 public class CreateThread3 {
-	
+
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		Date date1 = new Date();
 		int size = 5;
@@ -109,11 +109,11 @@ public class CreateThread3 {
 		}
 		// 关闭线程池
 		pool.shutdown();
-		
+
 		for(Future f:returnList) {
 			System.out.println(f.get().toString());
 		}
-		
+
 		Date date2 = new Date();
 		System.out.println("主线程运行时间："+(date2.getTime()-date1.getTime())+"ms");
 	}
@@ -148,8 +148,8 @@ ExecutoreService提供了submit()方法，传递一个Callable，或Runnable，�
 Callable和Runnable有几点不同：  
 	（1）Callable规定的方法是call()，而Runnable规定的方法是run().  	
 	（2）call()方法可抛出异常，而run()方法是不能抛出异常的。  	
-    （3） Callable的任务执行后可返回值，运行Callable任务可拿到一个Future对象，而Runnable的任务是不能返回值的。 
-    
+    （3） Callable的任务执行后可返回值，运行Callable任务可拿到一个Future对象，而Runnable的任务是不能返回值的。
+
 Future 表示异步计算的结果。它提供了检查计算是否完成的方法，以等待计算的完成，并检索计算的结果。  	通过Future对象可了解任务执行情况，可取消任务的执行，还可获取任务执行的结果。
 
 ##3-线程的状态
@@ -188,7 +188,7 @@ public class JoinTest {
 		JoinThread joinThread = new JoinThread();
 		Thread thread = new Thread(joinThread);
 		thread.start();
-		
+
 		for (int i = 0; i < 100; i++) {
 			if (i == 20) {
 				thread.join();//main阻塞...
@@ -204,7 +204,7 @@ class JoinThread implements Runnable {
 			System.out.println("join---"+i);
 		}		
 	}
-	
+
 }
 
 main---18
@@ -226,11 +226,11 @@ join---8
 注意，调用yield方法并不会让线程进入阻塞状态，而是让线程重回就绪状态，它只需要等待重新获取CPU执行时间，这一点是和sleep方法不一样的
 ```
 public class YieldTest extends Thread{
-	
+
 	public static void main(String[] args) {
 		Thread thread = new YieldTest();
 		thread.start();
-		
+
 		for (int i = 0; i < 100; i++) {
 			if (i%10 == 0) {
 				Thread.yield();
@@ -263,19 +263,19 @@ main---12
 demo:
 ```
 public class Test {
-     
+
     private int i = 10;
     private Object object = new Object();
-     
+
     public static void main(String[] args) throws IOException  {
         Test test = new Test();
         MyThread thread1 = test.new MyThread();
         MyThread thread2 = test.new MyThread();
         thread1.start();
         thread2.start();
-    } 
-     
-     
+    }
+
+
     class MyThread extends Thread{
         @Override
         public void run() {
@@ -393,24 +393,3 @@ synchronized单独写一篇博客，太长了，，，
 [Java中的多线程你只要看这一篇就够了](http://www.jianshu.com/p/40d4c7aebd66)
 
 2017年9月-by zhang.xx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
