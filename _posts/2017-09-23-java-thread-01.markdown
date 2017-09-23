@@ -1,0 +1,416 @@
+---
+layout:     post
+title:      "Java多线程（一）-基础"
+subtitle:   "多线程基础知识"
+date:       2017-09-23 00:00:00
+author:     "zhang.xx"
+header-img: "img/post-everydayguess.jpg"
+catalog: true
+tags:
+    - Java进阶
+---
+
+> If more of us valued food and cheer and song above hoarded gold, it would be a merrier world. ——**John·Ronald·Reuel·Tolkien**
+
+                                         
+
+
+---
+
+##0-前言
+
+Java多线程能满足程序员编写高效率的程序来达到充分利用CPU的目的
+
+##1-概念
+
+###1.1-进程(**process**)和线程(**thread**)
+
+进程，拥有自己独立的运行环境并且有独立的内存空间。执行中的程序一个进程至少包含一个线程。进程经常被同义地视为一个程序或者应用，尽管有时候一个应用并不止一个进程。
+线程，进程中负责程序执行的执行单元。线程本身依靠程序进行运行，线程是程序中的顺序控制流，只能使用分配给程序的资源和环境。
+
+###1.2-并行与并发
+并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的同时。
+并发：通过cpu调度算法，让用户看上去同时执行，实际上从cpu操作层面不是真正的同时。并发往往在场景中有公用的资源，那么针对这个公用的资源往往产生瓶颈，我们会用TPS或者QPS来反应这个系统的处理能力。
+
+##2-线程的创建
+###2.1-extends Thread 类
+继承Thread类必须重写run()方法
+创建线程对象后，通过start()方法去启动线程。
+注意，不是调用run()方法启动线程，run方法中只是定义需要执行的任务，如果调用run方法，即相当于在主线程中执行run方法，跟普通的方法调用没有任何区别，此时并不会创建一个新的线程来执行定义的任务
+```
+public class CreateThread1 {
+	public static void main(String[] args) {
+		System.out.println("主线程ID:"+Thread.currentThread().getId());
+		MyThread myThread = new MyThread("子线程1");
+		myThread.start();
+		MyThread myThread2 = new MyThread("子线程2");
+		myThread2.run();
+	}
+}
+class MyThread extends Thread {
+	private String name;
+	public MyThread(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public void run() {
+		System.out.println(name+",ID:"+Thread.currentThread().getId());
+	}
+}
+```
+运行结果：
+```
+主线程ID:1
+子线程2,ID:1 //虽然thread1的start方法调用在thread2的run方法前面调用，但是先输出的是thread2的run方法调用的相关信息，说明新线程创建的过程不会阻塞主线程的后续执行。
+子线程1,ID:11
+```
+###2.2-implements Runnable 接口
+实现Runnable接口必须重写其run方法
+调用Runnable的run方法的话，是不会创建新线程的，这根普通的方法调用没有任何区别
+由于Java的单继承，如果自定义类需要继承其他类，则只能选择实现Runnable接口
+Thread类的源代码实现了Runable接口：即实现静态代理的两者实现相同的接口（Runable接口）
+>class Thread implements Runnable
+
+```
+public class CreateThread2 {
+	public static void main(String[] args) {
+	    // 静态代理模式
+		MyThread2 myThread2 = new MyThread2(); // 创建真实角色
+		Thread thread = new Thread(myThread2); // 创建代理角色 +真实角色引用
+		thread.start();
+	}
+}
+class MyThread2 implements Runnable {
+	@Override
+	public void run() {
+		System.out.println("this is s subthread");
+	}
+}
+```
+
+###2.3-使用ExecutorService、Callable、Future实现有返回结果的多线程
+优点：可以获取返回值
+
+```
+public class CreateThread3 {
+	
+	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		Date date1 = new Date();
+		int size = 5;
+		// 创建线程池
+		ExecutorService pool = Executors.newFixedThreadPool(size);
+		List<Future> returnList = new ArrayList<Future>();
+		for(int i=0;i<size;i++) {
+			Callable callable = new MyThread3("子线程"+i);
+			// 执行任务，并获取Future对象
+			Future future = pool.submit(callable);
+			returnList.add(future);
+		}
+		// 关闭线程池
+		pool.shutdown();
+		
+		for(Future f:returnList) {
+			System.out.println(f.get().toString());
+		}
+		
+		Date date2 = new Date();
+		System.out.println("主线程运行时间："+(date2.getTime()-date1.getTime())+"ms");
+	}
+
+}
+class MyThread3 implements Callable<Object>{
+	private String name;
+	public MyThread3(String name) {
+		this.name = name;
+	}
+	@Override
+	public Object call() throws Exception {
+		Date date1 = new Date();
+		Thread.sleep(1000);
+		Date date2 = new Date();
+		long time = date2.getTime() - date1.getTime();
+		return name+"运行了"+time+"ms";
+	}
+}
+```
+程序运行结果：
+```
+子线程0运行了1000ms
+子线程1运行了1000ms
+子线程2运行了1000ms
+子线程3运行了1000ms
+子线程4运行了1000ms
+主线程运行时间：1002ms
+```
+ExecutoreService提供了submit()方法，传递一个Callable，或Runnable，返回Future。如果Executor后台线程池还没有完成Callable的计算，这调用返回Future对象的get()方法，会阻塞直到计算完成。
+
+Callable和Runnable有几点不同：  
+	（1）Callable规定的方法是call()，而Runnable规定的方法是run().  	
+	（2）call()方法可抛出异常，而run()方法是不能抛出异常的。  	
+    （3） Callable的任务执行后可返回值，运行Callable任务可拿到一个Future对象，而Runnable的任务是不能返回值的。 
+    
+Future 表示异步计算的结果。它提供了检查计算是否完成的方法，以等待计算的完成，并检索计算的结果。  	通过Future对象可了解任务执行情况，可取消任务的执行，还可获取任务执行的结果。
+
+##3-线程的状态
+
+* 创建（new）状态: 准备好了一个多线程的对象
+* 就绪（runnable）状态: 调用了start()方法, 等待CPU进行调度
+* 运行（running）状态: 执行run()方法
+* 阻塞（blocked）状态: 暂时停止执行, 可能将资源交给其它线程使用
+* 终止（dead）状态: 线程销毁
+
+线程状态图：
+![](http://owqdwc45t.bkt.clouddn.com/java_thread1_1.jpg)
+
+注:sleep和wait的区别
+> * sleep是Thread类的方法,wait是Object类中定义的方法.
+* Thread.sleep不会导致锁行为的改变, 如果当前线程是拥有锁的, 那么Thread.sleep不会让线程释放锁.
+* Thread.sleep和Object.wait都会暂停当前的线程. OS会将执行时间分配给其它线程. 区别是, 调用wait后, 需要别的线程执行notify/notifyAll才能够重新获得CPU执行时间.
+
+##4-线程的上下文切换
+对于单核CPU来说（对于多核CPU，此处就理解为一个核），CPU在一个时刻只能运行一个线程，当在运行一个线程的过程中转去运行另外一个线程，这个叫做线程上下文切换（对于进程也是类似）。
+
+由于可能当前线程的任务并没有执行完毕，所以在切换时需要保存线程的运行状态，以便下次重新切换回来时能够继续切换之前的状态运行。举个简单的例子：比如一个线程A正在读取一个文件的内容，正读到文件的一半，此时需要暂停线程A，转去执行线程B，当再次切换回来执行线程A的时候，我们不希望线程A又从文件的开头来读取。
+
+因此需要记录线程A的运行状态，那么会记录哪些数据呢？因为下次恢复时需要知道在这之前当前线程已经执行到哪条指令了，所以需要记录程序计数器的值，另外比如说线程正在进行某个计算的时候被挂起了，那么下次继续执行的时候需要知道之前挂起时变量的值时多少，因此需要记录CPU寄存器的状态。所以一般来说，线程上下文切换过程中会记录程序计数器、CPU寄存器状态等数据。
+
+说简单点的：对于线程的上下文切换实际上就是 存储和恢复CPU状态的过程，它使得线程执行能够从中断点恢复执行。
+
+虽然多线程可以使得任务执行的效率得到提升，但是由于在线程切换时同样会带来一定的开销代价，并且多个线程会导致系统资源占用的增加，所以在进行多线程编程时要注意这些因素。
+
+##5-线程的常用方法
+###5.1-join：合并
+在很多情况下，主线程创建并启动了线程，如果子线程中药进行大量耗时运算，主线程往往将早于子线程结束之前结束。这时，如果主线程想等待子线程执行完成之后再结束，比如子线程处理一个数据，主线程要取得这个数据中的值，就要用到join()方法了。方法join()的作用是等待线程对象销毁
+```
+public class JoinTest {
+	public static void main(String[] args) throws InterruptedException {
+		JoinThread joinThread = new JoinThread();
+		Thread thread = new Thread(joinThread);
+		thread.start();
+		
+		for (int i = 0; i < 100; i++) {
+			if (i == 20) {
+				thread.join();//main阻塞...
+			}
+			System.out.println("main---"+i);
+		}
+	}
+}
+class JoinThread implements Runnable {
+	@Override
+	public void run() {
+		for (int i = 0; i < 100; i++) {
+			System.out.println("join---"+i);
+		}		
+	}
+	
+}
+
+main---18
+main---19
+join---1
+join---2
+join---3
+join---4
+join---5
+join---6
+join---7
+join---8
+---
+```
+
+###5.2-yield：暂停；
+调用yield方法会让当前线程交出CPU权限，让CPU去执行其他的线程。它跟sleep方法类似，同样不会释放锁。但是yield不能控制具体的交出CPU的时间，另外，yield方法只能让拥有相同优先级的线程有获取CPU执行时间的机会。
+
+注意，调用yield方法并不会让线程进入阻塞状态，而是让线程重回就绪状态，它只需要等待重新获取CPU执行时间，这一点是和sleep方法不一样的
+```
+public class YieldTest extends Thread{
+	
+	public static void main(String[] args) {
+		Thread thread = new YieldTest();
+		thread.start();
+		
+		for (int i = 0; i < 100; i++) {
+			if (i%10 == 0) {
+				Thread.yield();
+			}
+			System.out.println("main---"+i);
+		}
+	}
+	@Override
+	public void run() {
+		for (int i = 0; i < 100; i++) {
+			System.out.println("yeild---"+i);
+		}
+	}
+}
+
+main---8
+main---9
+yeild---0
+yeild---1
+main---10
+yeild---2
+main---11
+main---12
+---
+```
+
+###5.3-sleep：休眠；
+休眠，不释放锁,也就是说如果当前线程持有对某个对象的锁，则即使调用sleep方法，其他线程也无法访问这个对象。
+
+demo:
+```
+public class Test {
+     
+    private int i = 10;
+    private Object object = new Object();
+     
+    public static void main(String[] args) throws IOException  {
+        Test test = new Test();
+        MyThread thread1 = test.new MyThread();
+        MyThread thread2 = test.new MyThread();
+        thread1.start();
+        thread2.start();
+    } 
+     
+     
+    class MyThread extends Thread{
+        @Override
+        public void run() {
+            synchronized (object) {
+                i++;
+                System.out.println("i:"+i);
+                try {
+                    System.out.println("线程"+Thread.currentThread().getName()+"进入睡眠状态");
+                    Thread.currentThread().sleep(10000);
+                } catch (InterruptedException e) {
+                    // TODO: handle exception
+                }
+                System.out.println("线程"+Thread.currentThread().getName()+"睡眠结束");
+                i++;
+                System.out.println("i:"+i);
+            }
+        }
+    }
+}
+```
+运行结果：
+```
+i:11
+线程Thread-0进入睡眠状态
+线程Thread-0睡眠结束
+i:12
+i:13
+线程Thread-1进入睡眠状态
+线程Thread-1睡眠结束
+i:14
+```
+注意，如果调用了sleep方法，必须捕获InterruptedException异常或者将该异常向上层抛出。当线程睡眠时间满后，不一定会立即得到执行，因为此时可能CPU正在执行其他的任务。所以说调用sleep方法相当于让线程进入阻塞状态。
+
+##6-线程的基本信息
+
+1. currentThread() 返回代码段正在被哪个线程调用的信息
+2. isAlive() 判断当前线程是否处于活动状态
+3. getPriority()
+4. setPriority() 设置线程优先级
+5. getName()
+6. setName()
+7. setDaemon 设置线程是否成为守护线程
+8. isDaemon 判断线程是否是守护线程
+
+> JDK中使用3个常量来预置定义优先级的值:
+public final static int MIN_PRIORITY = 1;
+public final static int NORM_PRIORITY = 5;
+public final static int MAX_PRIORITY = 10;
+
+守护线程和用户线程的区别在于：守护线程依赖于创建它的线程，而用户线程则不依赖。举个简单的例子：如果在main线程中创建了一个守护线程，当main方法运行完毕之后，守护线程也会随着消亡。而用户线程则不会，用户线程会一直运行直到其运行完毕。在JVM中，像垃圾收集器线程就是守护线程。
+
+##7-线程的停止
+
+在Java中有以下3种方法可以终止正在运行的线程：
+
+1. 使用退出标志，使线程正常退出，也就是当run方法完成后线程终止
+2. 使用stop方法强行终止线程，但是不推荐使用这个方法，因为stop和suspend及resume一样，都是作废过期的方法，使用他们可能产生不可预料的结果。
+3. 使用interrupt方法中断线程，但这个不会终止一个正在运行的线程，还需要加入一个判断才可以完成线程的停止。
+
+```
+public class StopDemo01 {
+	public static void main(String[] args) {
+		Study s =new Study();
+		new Thread(s).start();
+		for(int i=0;i<100;i++){
+			if(50==i){ //外部干涉
+				s.stop();
+			}
+			System.out.println("main.....-->"+i);
+		}
+	}
+}
+class Study implements Runnable{
+	 //1)、线程类中 定义 线程体使用的标识	 
+	private boolean flag =true;
+	@Override
+	public void run() {
+		//2)、线程体使用该标识
+		while(flag){
+			System.out.println("study thread....");
+		}
+	}
+	//3)、对外提供方法改变标识
+	public void stop(){
+		this.flag =false;
+	}
+}
+```
+
+##8-线程的同步
+并发 多个线程访问同一份资源  确保资源安全  -->线程安全
+
+###8.1-同步代码块
+```
+synchronized(引用类型|this|类.class){
+    需要同步的代码块;
+}
+```
+###8.2-同步方法
+```
+synchronized void 方法名称(){}
+```
+synchronized单独写一篇博客，太长了，，，
+
+###8.3-死锁: 过多的同步容易造成死锁
+
+
+##9-总结与参考
+参考了尚学堂裴新的多线程视频15集，以及下面相关博客，代码示例均为手敲，jdk1.8下编译通过；
+东西比较多，还需实践来来熟练掌握。
+
+参考：
+[Java多线程干货系列—（一）Java多线程基础](http://tengj.top/2016/04/24/thread1/#总结)
+[Java核心技术---多线程](http://movesan.me/2017/02/16/java-thread/)
+[Java中的多线程你只要看这一篇就够了](http://www.jianshu.com/p/40d4c7aebd66)
+
+2017年9月-by zhang.xx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
