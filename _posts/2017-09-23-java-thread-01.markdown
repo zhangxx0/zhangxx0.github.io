@@ -26,16 +26,20 @@ Java多线程能满足程序员编写高效率的程序来达到充分利用 CPU
 ### 1.1-进程(**process**)和线程(**thread**)
 
 进程，拥有自己独立的运行环境并且有独立的内存空间。执行中的程序一个进程至少包含一个线程。进程经常被同义地视为一个程序或者应用，尽管有时候一个应用并不止一个进程。
+
 线程，进程中负责程序执行的执行单元。线程本身依靠程序进行运行，线程是程序中的顺序控制流，只能使用分配给程序的资源和环境。
 
 ### 1.2-并行与并发
 并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的同时。
+
 并发：通过cpu调度算法，让用户看上去同时执行，实际上从cpu操作层面不是真正的同时。并发往往在场景中有公用的资源，那么针对这个公用的资源往往产生瓶颈，我们会用TPS或者QPS来反应这个系统的处理能力。
 
 ## 2-线程的创建
 ### 2.1-extends Thread 类
 继承Thread类必须重写run()方法
+
 创建线程对象后，通过start()方法去启动线程。
+
 注意，不是调用run()方法启动线程，run方法中只是定义需要执行的任务，如果调用run方法，即相当于在主线程中执行run方法，跟普通的方法调用没有任何区别，此时并不会创建一个新的线程来执行定义的任务
 ```
 public class CreateThread1 {
@@ -67,8 +71,11 @@ class MyThread extends Thread {
 ```
 ### 2.2-implements Runnable 接口
 实现Runnable接口必须重写其run方法
+
 调用Runnable的run方法的话，是不会创建新线程的，这根普通的方法调用没有任何区别
+
 由于Java的单继承，如果自定义类需要继承其他类，则只能选择实现Runnable接口
+
 Thread类的源代码实现了Runable接口：即实现静态代理的两者实现相同的接口（Runable接口）
 >class Thread implements Runnable
 
@@ -146,9 +153,9 @@ class MyThread3 implements Callable<Object>{
 ExecutoreService提供了submit()方法，传递一个Callable，或Runnable，返回Future。如果Executor后台线程池还没有完成Callable的计算，这调用返回Future对象的get()方法，会阻塞直到计算完成。
 
 Callable和Runnable有几点不同：  
-	（1）Callable规定的方法是call()，而Runnable规定的方法是run().  	
-	（2）call()方法可抛出异常，而run()方法是不能抛出异常的。  	
-    （3） Callable的任务执行后可返回值，运行Callable任务可拿到一个Future对象，而Runnable的任务是不能返回值的。
+- （1）Callable规定的方法是call()，而Runnable规定的方法是run().  	
+-	（2）call()方法可抛出异常，而run()方法是不能抛出异常的。  	
+- （3） Callable的任务执行后可返回值，运行Callable任务可拿到一个Future对象，而Runnable的任务是不能返回值的。
 
 Future 表示异步计算的结果。它提供了检查计算是否完成的方法，以等待计算的完成，并检索计算的结果。  	通过Future对象可了解任务执行情况，可取消任务的执行，还可获取任务执行的结果。
 
@@ -161,12 +168,13 @@ Future 表示异步计算的结果。它提供了检查计算是否完成的方�
 * 终止（dead）状态: 线程销毁
 
 线程状态图：
+
 ![](http://owqdwc45t.bkt.clouddn.com/java_thread1_1.jpg)
 
 注:sleep和wait的区别
 > * sleep是Thread类的方法,wait是Object类中定义的方法.
-* Thread.sleep不会导致锁行为的改变, 如果当前线程是拥有锁的, 那么Thread.sleep不会让线程释放锁.
-* Thread.sleep和Object.wait都会暂停当前的线程. OS会将执行时间分配给其它线程. 区别是, 调用wait后, 需要别的线程执行notify/notifyAll才能够重新获得CPU执行时间.
+> * Thread.sleep不会导致锁行为的改变, 如果当前线程是拥有锁的, 那么Thread.sleep不会让线程释放锁.
+> * Thread.sleep和Object.wait都会暂停当前的线程. OS会将执行时间分配给其它线程. 区别是, 调用wait后, 需要别的线程执行notify/notifyAll才能够重新获得CPU执行时间.
 
 ## 4-线程的上下文切换
 对于单核CPU来说（对于多核CPU，此处就理解为一个核），CPU在一个时刻只能运行一个线程，当在运行一个线程的过程中转去运行另外一个线程，这个叫做线程上下文切换（对于进程也是类似）。
@@ -321,11 +329,13 @@ i:14
 8. isDaemon 判断线程是否是守护线程
 
 > JDK中使用3个常量来预置定义优先级的值:
-public final static int MIN_PRIORITY = 1;
-public final static int NORM_PRIORITY = 5;
-public final static int MAX_PRIORITY = 10;
+> public final static int MIN_PRIORITY = 1;
+> public final static int NORM_PRIORITY = 5;
+> public final static int MAX_PRIORITY = 10;
 
-守护线程和用户线程的区别在于：守护线程依赖于创建它的线程，而用户线程则不依赖。举个简单的例子：如果在main线程中创建了一个守护线程，当main方法运行完毕之后，守护线程也会随着消亡。而用户线程则不会，用户线程会一直运行直到其运行完毕。在JVM中，像垃圾收集器线程就是守护线程。
+守护线程和用户线程的区别在于：
+
+守护线程依赖于创建它的线程，而用户线程则不依赖。举个简单的例子：如果在main线程中创建了一个守护线程，当main方法运行完毕之后，守护线程也会随着消亡。而用户线程则不会，用户线程会一直运行直到其运行完毕。在JVM中，像垃圾收集器线程就是守护线程。
 
 ## 7-线程的停止
 
@@ -385,11 +395,15 @@ synchronized单独写一篇博客，太长了，，，
 
 ## 9-总结与参考
 参考了尚学堂裴新的多线程视频15集，以及下面相关博客，代码示例均为手敲，jdk1.8下编译通过；
+
 东西比较多，还需实践来来熟练掌握。
 
 参考：
+
 [Java多线程干货系列—（一）Java多线程基础](http://tengj.top/2016/04/24/thread1/#总结)
+
 [Java核心技术---多线程](http://movesan.me/2017/02/16/java-thread/)
+
 [Java中的多线程你只要看这一篇就够了](http://www.jianshu.com/p/40d4c7aebd66)
 
 2017年9月-by zhang.xx

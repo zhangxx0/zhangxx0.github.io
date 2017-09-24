@@ -1,0 +1,52 @@
+---
+layout:     post
+title:      "Java多线程（二）-synchronized"
+subtitle:   "多线程同步"
+date:       2017-09-24 00:00:00
+author:     "zhang.xx"
+header-img: "img/post-everydayguess.jpg"
+catalog: true
+tags:
+    - Java进阶
+---
+
+> If more of us valued food and cheer and song above hoarded gold, it would be a merrier world. ——**John·Ronald·Reuel·Tolkien**
+
+---
+
+## 0-前言
+
+Java多线程能满足程序员编写高效率的程序来达到充分利用 CPU 的目的
+
+## 1-概念
+
+### 1.1-进程(**process**)和线程(**thread**)
+
+## 8-线程的同步
+并发 多个线程访问同一份资源  确保资源安全  -->线程安全
+
+### 8.1-同步代码块
+```
+synchronized(引用类型|this|类.class){
+    需要同步的代码块;
+}
+```
+### 8.2-同步方法
+```
+synchronized void 方法名称(){}
+```
+synchronized单独写一篇博客，太长了，，，
+
+### 8.3-死锁: 过多的同步容易造成死锁
+
+
+## 9-总结与参考
+参考了尚学堂裴新的多线程视频15集，以及下面相关博客，代码示例均为手敲，jdk1.8下编译通过；
+东西比较多，还需实践来来熟练掌握。
+
+参考：
+[Java多线程干货系列—（一）Java多线程基础](http://tengj.top/2016/04/24/thread1/#总结)
+[Java核心技术---多线程](http://movesan.me/2017/02/16/java-thread/)
+[Java中的多线程你只要看这一篇就够了](http://www.jianshu.com/p/40d4c7aebd66)
+
+2017年9月-by zhang.xx
