@@ -14,39 +14,182 @@ tags:
 
 ---
 
-## 0-前言
+## 0-线程安全
+基本上所有的并发模式在解决线程安全问题时，都采用“序列化访问临界资源”的方案，即在同一时刻，只能有一个线程访问临界资源，也称作同步互斥访问。
 
-Java多线程能满足程序员编写高效率的程序来达到充分利用 CPU 的目的
+通常来说，是在访问临界资源的代码前面加上一个锁，当访问完临界资源后释放锁，让其他线程继续访问。
 
-## 1-概念
+在Java中，提供了两种方式来实现同步互斥访问：synchronized和Lock。
 
-### 1.1-进程(**process**)和线程(**thread**)
+**互斥锁**，顾名思义：能到达到互斥访问目的的锁，如果对临界资源加上互斥锁，当一个线程在访问该临界资源时，其他线程便只能等待。
 
-## 8-线程的同步
-并发 多个线程访问同一份资源  确保资源安全  -->线程安全
+synchronized是Java语言的关键字，当它用来修饰一个方法或者一个代码块的时候，能够保证在同一时刻最多只有一个线程执行该段代码。
 
-### 8.1-同步代码块
+在Java中，每一个对象都拥有一个锁标记（monitor），也称为监视器，多线程同时访问某个对象时，线程只有获取了该对象的锁才能访问。
+
+在Java中，可以使用synchronized关键字来标记一个方法或者代码块，当某个线程调用该对象的synchronized方法或者访问synchronized代码块时，这个线程便获得了该对象的锁，其他线程暂时无法访问这个方法，只有等待这个方法执行完毕或者代码块执行完毕，这个线程才会释放该对象的锁，其他线程才能执行这个方法或者代码块。
+
+## 1-同步代码块
+
+**锁住的是对象而不是代码**
+
+synchronized代码块，被修饰的代码成为同步语句块，其作用的范围是**调用这个代码块的对象**,我们在用synchronized关键字的时候，能缩小代码段的范围就尽量缩小，能在代码段上加同步就不要再整个方法上加同步。这叫减小锁的粒度，使代码更大程度的并发。
+
+synchronized静态方法，修饰一个static静态方法，其作用范围是整个静态方法，作用对象是这个类的所有对象。
+
+synchronized类，其作用范围是Synchronized后面括号括起来的部分synchronized(className.class)，作用的对象是这个类的所有对象。
+
+synchronized()，()中是锁住的对象， synchronized(this)锁住的只是对象本身，同一个类的不同对象调用的synchronized方法并不会被锁住，而synchronized(className.class)实现了全局锁的功能，所有这个类的对象调用这个方法都受到锁的影响，此外()中还可以添加一个具体的对象，实现给具体对象加锁。
+
+- 当一个线程访问object的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该object中的非synchronized(this)同步代码块。(两个线程使用的是同一个对象)
+- 当一个线程访问object的一个synchronized(this)同步代码块时，其他线程对object中所有其它synchronized(this)同步代码块的访问将被阻塞(同上，两个线程使用的是同一个对象)。
+
+每个类也会有一个锁，它可以用来控制对static数据成员的并发访问。
+并且如果一个线程执行一个对象的非static synchronized方法，另外一个线程需要执行这个对象所属类的static synchronized方法，此时不会发生互斥现象，因为访问static synchronized方法占用的是类锁，而访问非static synchronized方法占用的是对象锁，所以不存在互斥现象
+
 ```
 synchronized(引用类型|this|类.class){
     需要同步的代码块;
 }
 ```
-### 8.2-同步方法
+
+## 2-同步方法
+synchronized方法，被修饰的方法成为同步方法，其作用范围是整个方法，作用对象是调用这个方法的对象。
+
 ```
 synchronized void 方法名称(){}
 ```
-synchronized单独写一篇博客，太长了，，，
 
-### 8.3-死锁: 过多的同步容易造成死锁
+代码示例：
+```
+public class SyncDemo1 {
+	public static void main(String[] args) {
+		SyncThread syncThread = new SyncThread();
 
+		Thread t1 = new Thread(syncThread);
+		Thread t2 = new Thread(syncThread);
+		Thread t3 = new Thread(syncThread);
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+}
 
-## 9-总结与参考
+class SyncThread implements Runnable {
+	private int num = 10;
+	private boolean flag = true;
+
+	@Override
+	public void run() {
+		while (flag) {
+			Test();
+//			Test2();
+		}
+	}
+
+	// 同步代码块
+	public void Test() {
+		synchronized (this) {
+			if (num <= 0) {
+				flag = false; // 跳出循环
+				return;
+			}
+			try {
+				Thread.sleep(1000); // 模拟 延时
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println(Thread.currentThread().getName() + "抢到了" + num--);
+		}
+	}
+
+	// 同步方法
+	public synchronized void Test2() {
+		if (num <= 0) {
+			flag = false; // 跳出循环
+			return;
+		}
+		try {
+			Thread.sleep(1000); // 模拟 延时
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println(Thread.currentThread().getName() + "抢到了" + num--);
+	}
+}
+```
+
+## 3-死锁
+过多的同步方法可能造成死锁
+
+## 4-生产者消费者模式
+Producer-consumer probliem，解决同步的思路；
+
+信号灯法实现生产者消费者模式：
+```
+class Movie {
+	private String pic;
+	// 信号灯
+	// flag -->T 生产生产，消费者等待 ，生产完成后通知消费
+	// flag -->F 消费者消费 生产者等待, 消费完成后通知生产
+	private boolean flag = true;
+	/**
+	 * 播放
+	 */
+	public synchronized void play(String pic) {
+		if (!flag) { // 生产者等待
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		// 开始生产
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("生产了:" + pic);
+		// 生产完毕
+		this.pic = pic;
+		// 通知消费
+		this.notify();
+		// 生产者停下
+		this.flag = false;
+	}
+
+	public synchronized void watch() {
+		if (flag) { // 消费者等待
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		// 开始消费
+		try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("消费了" + pic);
+		// 消费完毕
+		// 通知生产
+		this.notifyAll();
+		// 消费停止
+		this.flag = true;
+	}
+}
+```
+生产者消费者模式的实现还有其他的方法，可以进一步的学习。
+
+## 5-总结与参考
 参考了尚学堂裴新的多线程视频15集，以及下面相关博客，代码示例均为手敲，jdk1.8下编译通过；
-东西比较多，还需实践来来熟练掌握。
 
 参考：
-[Java多线程干货系列—（一）Java多线程基础](http://tengj.top/2016/04/24/thread1/#总结)
-[Java核心技术---多线程](http://movesan.me/2017/02/16/java-thread/)
-[Java中的多线程你只要看这一篇就够了](http://www.jianshu.com/p/40d4c7aebd66)
+
+[Java多线程干货系列—（二）synchronized](http://tengj.top/2016/05/03/threadsynchronized2/)
+
 
 2017年9月-by zhang.xx
