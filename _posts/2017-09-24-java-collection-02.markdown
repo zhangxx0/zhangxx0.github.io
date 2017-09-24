@@ -264,7 +264,7 @@ ArrayList和LinkedList的区别
 ArrayList和Vector的区别
 1. Vector和ArrayList几乎是完全相同的,唯一的区别在于Vector是同步类(synchronized)，属于强同步类。因此开销就比ArrayList要大，访问要慢。正常情况下,大多数的Java程序员使用ArrayList而不是Vector,因为同步完全可以由程序员自己来控制。
 2. Vector每次扩容请求其大小的2倍空间，而ArrayList是1.5倍。
-3. Vector还有一个子类Stack. 这是干嘛用的？
+3. Vector还有一个子类Stack. 栈！！！
 
 参考了尚学堂高淇的集合视频15集，以及下面相关博客，代码示例均为手敲，jdk1.8下编译通过；
 
