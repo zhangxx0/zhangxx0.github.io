@@ -23,7 +23,7 @@ tags:
 
 参考：
 
-[Java多线程干货系列—（二）synchronized](http://tengj.top/2016/05/03/threadsynchronized2/)
+[Java多线程干货系列—（四）volatile关键字](http://tengj.top/2016/05/06/threadvolatile4/)
 
 
 2017年9月-by zhang.xx
