@@ -17,13 +17,19 @@ tags:
 ## 前言
 
 
+## 概览
+
+## 源码解析(基于jdk1.8.0_91)
+
+
+
 ## 总结与参考
 参考了尚学堂高淇的集合视频15集，以及下面相关博客，代码示例均为手敲，jdk1.8下编译通过；
 
 参考：
 
-[Java集合干货系列-集合总体大纲](http://tengj.top/2016/04/12/javajhtotal/)  
-[JCFInternals-1-Overview](https://github.com/CarpenterLee/JCFInternals/blob/master/markdown/1-Overview.md)  
+[]()  
+[]()  
 
 
 2017年9月-by zhang.xx
