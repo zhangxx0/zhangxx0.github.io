@@ -313,7 +313,8 @@ HashSet 是对 HashMap 的简单包装，对 HashSet 的函数调用都会转换
 
 JDK1.7：  
 [Java集合干货系列-（三）HashMap源码解析](http://tengj.top/2016/04/15/javajh3hashmap/#)
-[JCFInternals-6-HashSet and HashMap](https://github.com/CarpenterLee/JCFInternals/blob/master/markdown/6-HashSet%20and%20HashMap.md)
+[JCFInternals-6-HashSet and HashMap](https://github.com/CarpenterLee/JCFInternals/blob/master/markdown/6-HashSet%20and%20HashMap.md)  
+
 JDK1.8：  
 [{美团技术团队}Java 8系列之重新认识HashMap](https://tech.meituan.com/java-hashmap.html)
 [深入分析hashmap](http://blog.csdn.net/lianhuazy167/article/details/66967698)  
