@@ -2,7 +2,7 @@
 layout:     post
 title:      "JVM（一）-虚拟机类加载机制"
 subtitle:   ""
-date:       2017-09-24 06:00:00
+date:       2017-10-01 12:00:00
 author:     "zhang.xx"
 header-img: "img/post-everydayguess.jpg"
 catalog: true
