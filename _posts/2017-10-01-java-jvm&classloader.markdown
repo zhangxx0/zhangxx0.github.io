@@ -36,7 +36,7 @@ tags:
 - 使用（Using）
 - 卸载（Unloading）
 
-![类的生命周期]()
+![类的生命周期](http://owqdwc45t.bkt.clouddn.com/class-load.png)
 
 其中，前五个阶段为类的加载全过程，其中验证、准备、解析3个阶段统称为 **连接（Linking）**；  
 在这五个阶段中，加载、验证、准备和初始化这四个阶段发生的顺序是确定的，而解析阶段则不一定，它在某些情况下可以在初始化阶段之后开始，这是为了支持Java语言的运行时绑定（也成为动态绑定或晚期绑定）。另外注意这里的几个阶段是按顺序开始，而不是按顺序进行或完成，因为这些阶段通常都是互相交叉地混合进行的，通常在一个阶段执行的过程中调用或激活另一个阶段。  
@@ -195,7 +195,7 @@ public static void main(String[] args) {
 
 站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：
 
-![]()
+![](http://owqdwc45t.bkt.clouddn.com/calssloader.png)
 
 **启动类加载器**：`Bootstrap ClassLoader`，负责加载存放在`JDK\jre\lib`(JDK代表JDK的安装目录，下同)下，或被`-Xbootclasspath`参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被Bootstrap ClassLoader加载）。启动类加载器是无法被Java程序直接引用的。  
 **扩展类加载器**：`Extension ClassLoader`，该加载器由`sun.misc.Launcher$ExtClassLoader`实现，它负责加载`JDK\jre\lib\ext`目录中，或者由`java.ext.dirs`系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。
