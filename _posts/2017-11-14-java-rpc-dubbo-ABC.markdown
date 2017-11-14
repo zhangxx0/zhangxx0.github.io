@@ -23,16 +23,16 @@ tags:
 还是直接整英文吧：  
 > Dubbo |ˈdʌbəʊ| is a high-performance, java based RPC framework open-sourced by Alibaba. As in many RPC systems, dubbo is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types. On the server side, the server implements this interface and runs a dubbo server to handle client calls. On the client side, the client has a stub that provides the same methods as the server.
 
-![]{http://dubbo.io/images//dubbo-architecture.png}
+![](http://dubbo.io/images//dubbo-architecture.png)
 
 废话少说，直接上手，代码基于jdk1.7、maven3.X；
 
 下面直接描述demo的搭建过程：  
-代码托管在github：[dubbo-demo]{https://github.com/zhangxx0/dubbo-demo}
+代码托管在github：[dubbo-demo](https://github.com/zhangxx0/dubbo-demo)
 
 ## （1）创建idea Maven项目，并新建3个Module  
 
-![]{http://owqdwc45t.bkt.clouddn.com/dubbo-1.png}
+![](http://owqdwc45t.bkt.clouddn.com/dubbo-1.png)
 
 ## （2）编写providerapi Module代码
 
@@ -190,7 +190,7 @@ public class DemoPrividerTest {
 
 ## （4）启动服务提供者，在dubbo admin中查看其是否注册成功
 
-![]{http://owqdwc45t.bkt.clouddn.com/dubbo-2.png}
+![](http://owqdwc45t.bkt.clouddn.com/dubbo-2.png)
 
 ## （5）编写consumer Module代码
 **服务消费者**:  
@@ -241,7 +241,7 @@ public class Consumer {
 
 ## （6）运行消费提供则代码，在dubbo admin中查看其是否注册成功
 
-![]{http://owqdwc45t.bkt.clouddn.com/dubbo-3.png}  
+![](http://owqdwc45t.bkt.clouddn.com/dubbo-3.png)  
 
 ## 遇到的两个问题：  
 
@@ -259,16 +259,16 @@ public class Consumer {
 2.**注册中心和监控中心都是可选的， 服务消费者可以直连服务提供者那为什么还要使用注册中心呢，有什么好处吗？**  
 [zookeeper在Dubbo中扮演了一个什么角色，起到了什么作用啊？]{https://www.zhihu.com/question/25070185}  
 还是不是很理解  
-[为什么要用zookeeper?]{https://m.2cto.com/kf/201708/668587.html}  
+[为什么要用zookeeper?](https://m.2cto.com/kf/201708/668587.html)  
 通讯录的解释比较通俗易懂；  
 
 ## zookeeper的下载与启动
 
-[ Zookeeper注册中心的搭建]{http://blog.csdn.net/u013142781/article/details/50395650}
+[ Zookeeper注册中心的搭建](http://blog.csdn.net/u013142781/article/details/50395650)
 
 ## dubbo admin的编译与本地启动
 
-[dubbo-admin管理平台搭建]{http://blog.csdn.net/u013142781/article/details/50396621}  
+[dubbo-admin管理平台搭建](http://blog.csdn.net/u013142781/article/details/50396621)  
 
 dubbo的使用，其实只需要有注册中心，消费者，提供者这三个就可以使用了，但是并不能看到有哪些消费者和提供者，为了更好的调试，发现问题，解决问题，因此引入dubbo-admin。通过dubbo-admin可以对消费者和提供者进行管理。
 
