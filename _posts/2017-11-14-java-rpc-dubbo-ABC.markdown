@@ -254,7 +254,7 @@ public class Consumer {
 
 ## 几个疑问？？？  
 1.**官方的demo中，为什么要给提供者再做一个API的项目，然后在提供者工程中导入API工程的依赖，为什么要分为两个工程来实现这个功能呢？ 这样有什么优点?**  
-![]{http://owqdwc45t.bkt.clouddn.com/dubbo-4.png}
+![](http://owqdwc45t.bkt.clouddn.com/dubbo-4.png)
 
 2.**注册中心和监控中心都是可选的， 服务消费者可以直连服务提供者那为什么还要使用注册中心呢，有什么好处吗？**  
 [zookeeper在Dubbo中扮演了一个什么角色，起到了什么作用啊？]{https://www.zhihu.com/question/25070185}  
