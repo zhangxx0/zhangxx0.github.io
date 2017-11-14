@@ -257,7 +257,7 @@ public class Consumer {
 ![](http://owqdwc45t.bkt.clouddn.com/dubbo-4.png)
 
 2.**注册中心和监控中心都是可选的， 服务消费者可以直连服务提供者那为什么还要使用注册中心呢，有什么好处吗？**  
-[zookeeper在Dubbo中扮演了一个什么角色，起到了什么作用啊？]{https://www.zhihu.com/question/25070185}  
+[zookeeper在Dubbo中扮演了一个什么角色，起到了什么作用啊？](https://www.zhihu.com/question/25070185)  
 还是不是很理解  
 [为什么要用zookeeper?](https://m.2cto.com/kf/201708/668587.html)  
 通讯录的解释比较通俗易懂；  
