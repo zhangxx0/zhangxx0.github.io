@@ -272,15 +272,23 @@ public class Consumer {
 
 dubbo的使用，其实只需要有注册中心，消费者，提供者这三个就可以使用了，但是并不能看到有哪些消费者和提供者，为了更好的调试，发现问题，解决问题，因此引入dubbo-admin。通过dubbo-admin可以对消费者和提供者进行管理。
 
+## dubbo monitor的配置  
+```java
+  TODO
+```
 
 ## dubbo的原理简述
 ```java
   TODO
 ```
 
-## 总结与参考
-参考了尚学堂高淇的JVM核心机制视频集218-223，以及下面相关博客  
-代码示例在jdk1.8下编译通过  
+## 总结与参考  
+这里只是简单的一个dubbo入门的例子，至于dubbo怎么和SSM进行结合编程，以及之后与MQ等框架的结合，需要进一步的学习；
+
+2017年11月16日00:24:54
+昨天早上，也就是15号，上班之后看到阿里技术公众号发了一篇文章：  
+[分布式服务框架Dubbo疯狂更新！阿里开源要搞大事情？](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247486338&idx=1&sn=e5decc5fe99c4cfe46db8ea5e7e12701&chksm=e929368dde5ebf9bc031a3c18dbe9884b46d91053cf2928a69589a2bed7a7732d65a61236975&mpshare=1&scene=23&srcid=1115z5kFIvEREYhmh4BMCW98#rd)  
+
 
 参考：
 
