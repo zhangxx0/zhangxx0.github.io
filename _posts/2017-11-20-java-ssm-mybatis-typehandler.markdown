@@ -175,7 +175,7 @@ public class UserDemo {
 ## 总结与参考  
 
 
-参考：
+参考：  
 [MyBatis 使用通用 Enum 映射](http://albertchen.top/2016/02/18/MyBatis-%E4%BD%BF%E7%94%A8%E9%80%9A%E7%94%A8-Enum-%E6%98%A0%E5%B0%84/)  
 [mybatis枚举自动转换实现](http://blog.csdn.net/fighterandknight/article/details/51520402)  
 [mybatis 官方文档](http://www.mybatis.org/mybatis-3/zh/configuration.html#typeHandlers)     
