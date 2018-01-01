@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "WOTPlus(9) - 0.9.6版本介绍"
-subtitle:   "XVM说明一切"
+subtitle:   "Happy dog year！"
 date:       2018-01-01 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-wotplus-nine.png"
@@ -56,9 +56,9 @@ _ _ _
 
 [新版WOT战绩查询页面](http://rank.kongzhong.com/search.html)   
 
-然而，xvm貌似也要那啥了，具体参见：  
+然而，xvm貌似也要gg了，具体参见：  
 
-[新版WOT战绩查询页面](http://182.18.61.50/search.html)   
+[送君千里，终须一别](http://xvm.garphy.com/?p=19351)   
 
 
 
@@ -71,6 +71,8 @@ _ _ _
 ## 下载地址
 
 出现应用未安装的错误，解决办法是卸载掉0.9.5版本，重新安装新的0.9.6版本；
+
+另：魅族商店可能还在审核中，酌情下载，，，
 
 * Fir.im：[http://fir.im/WOTPlus](http://fir.im/WOTPlus)
 * 应用宝：[ WOTPlus-应用宝](http://android.myapp.com/myapp/detail.htm?apkName=com.xinxin.wotplus)
