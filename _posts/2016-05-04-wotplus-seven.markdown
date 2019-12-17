@@ -16,13 +16,13 @@ tags:
 # APP基础功能
 
 核心功能开发完毕，开始着手APP基础功能开发；
- 
+
 ## 关于页面
 
 #### fir.im 检查更新  
 
 检查更新逻辑图：
-![](http://7xsvfv.com1.z0.glb.clouddn.com/firim.jpg)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/firim.jpg)
 
 使用 **fir.im** 的 [版本查询接口](http://fir.im/docs/version_detection)，编写一个工具方法：`checkVersion` ；通过对比版本号和版本名称来检测是否有更新，若有，则打开一个 `AlertDialog` ，进行下载；若没有，则提示已是最新版本；  
 具体代码不想再贴了，没什么技术含量；
@@ -67,49 +67,3 @@ startActivity(data);
 
 所有的功能基本全部完成，接下来是bug修改与美化了；
 2016年5月15日18:30:31 by zhang.xx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

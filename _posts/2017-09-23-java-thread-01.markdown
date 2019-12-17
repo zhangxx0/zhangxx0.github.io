@@ -169,7 +169,7 @@ Future 表示异步计算的结果。它提供了检查计算是否完成的方�
 
 线程状态图：
 
-![](http://owqdwc45t.bkt.clouddn.com/java_thread1_1.jpg)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/java/java_thread1_1.jpg)
 
 注:sleep和wait的区别
 > * sleep是Thread类的方法,wait是Object类中定义的方法.

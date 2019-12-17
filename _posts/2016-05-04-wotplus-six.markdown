@@ -16,7 +16,7 @@ tags:
 # 承上启下
 
 写到这里，就剩下一个功能了，那就是 **战车** 了；
- 
+
 ## 战车页面
 
 关于战车页面的设计与数据提取；  
@@ -29,7 +29,7 @@ tags:
 类似下面的请求，需要参数acount_id和vehicle_cd：  
 [http://ncw.worldoftanks.cn/zh-cn/community/accounts/1509154099/vehicle_details/?vehicle_cd=305](http://ncw.worldoftanks.cn/zh-cn/community/accounts/1509154099/vehicle_details/?vehicle_cd=305)
 
-返回的 json 包括该战车的成就list，和其他的战绩信息； 
+返回的 json 包括该战车的成就list，和其他的战绩信息；
 
 **一些技术细节**  
 
@@ -42,13 +42,13 @@ tags:
 
 
  **战车类型列表** 图：  
-![](http://7xsvfv.com1.z0.glb.clouddn.com/tankpage11.jpg)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankpage11.jpg)
 
 **各类型战车列表** 图：  
-![](http://7xsvfv.com1.z0.glb.clouddn.com/tankpage22.jpg)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankpage22.jpg)
 
 **坦克详细战绩页面** 图：  
-![](http://7xsvfv.com1.z0.glb.clouddn.com/tankpage3.png)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankpage3.png)
 
 
 ## 两个问题
@@ -56,7 +56,7 @@ tags:
 #### 1、上滑时toolbar只隐藏一半的问题
 
 错误图：  
-![](http://7xsvfv.com1.z0.glb.clouddn.com/tankproblem2.jpg)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankproblem2.jpg)
 
 
 [ 参照 toolbar的使用 ](https://guides.codepath.com/android/Handling-Scrolls-with-CoordinatorLayout#floating-action-buttons-and-snackbars)
@@ -77,57 +77,3 @@ tags:
 明明还有好多要干的，可是不知从何下手了；
 
 2016年5月15日16:12:23 by zhang.xx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

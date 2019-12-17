@@ -58,7 +58,7 @@ iv_begin.startAnimation(scaleAnim);
 
 *弄了好一阵子，命令行、录屏软件之类的都试了，但是在我的MX2上就是不好使，统统闪退，所以先来个静态图先看着，等我有空了再弄动态演示图*
 
-![启动图](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_001.jpg)
+![启动图]https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_001.jpg)
 
 启动图片的尺寸：1080x1920
 
@@ -66,7 +66,7 @@ iv_begin.startAnimation(scaleAnim);
 
 这里的主页架构参照：Chris Banes 的轮子 [**cheesesquare**](https://github.com/chrisbanes/cheesesquare)  
 使用侧滑菜单罗列功能模块；  
-![ 侧滑菜单图 ](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_bolg_01_01.png)
+![ 侧滑菜单图 ]https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_bolg_01_01.png)
 
 **Navigation的图标问题**   
 全部取自 Google 的 [**Material icans**](https://design.google.com/icons/)，免去了自己找或者自己画的痛苦，当然我也不会画，，，
@@ -139,7 +139,7 @@ private void setupDrawerContent(final NavigationView navigationView) {
 
 
 然后开始写首页的UI，首页是一个Card的RecyclerView，所以先写了几个静态的CardView：  
-![两个Card](http://7xsvfv.com2.z0.glb.clouddn.com/wotplus_blog_01_02.jpg)  
+![两个Card]https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_blog_01_02.jpg)  
 
 ### 数据的获取
 
@@ -235,7 +235,7 @@ if (TextUtils.isEmpty(clanUrl)) {
 ```
 
 从html中找到动态获取军团信息的js：  
-![军团信息获取](http://7xsvfv.com1.z0.glb.clouddn.com/claninfo.jpg)  
+![军团信息获取](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/claninfo.jpg)  
 这个 url 返回的是 **json** ，但是，这个json里的数据也是html代码，用于直接在html页面上显示军团块的，因此还需要用 jsoup 对里面的信息进行提取；  
 实现方式：  
 使用Gson将获取到的json数据转换成对应的类-ClanInfo；
@@ -449,7 +449,7 @@ for (int i = 0; i < subrootContents.size(); i++) {
 woter.setAchievements(achievements);
 ```
 
-![ 解析完的成就类 ](http://7xsvfv.com1.z0.glb.clouddn.com/Achievements.png)
+![ 解析完的成就类 ](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/Achievements.png)
 
 这个地方是比较复杂的，因为要根据html的结构一层层的抽丝剥茧，到最后才能将所有的数据一个个的抽离出来，这里使用了嵌套循环，使之最后直接构建出一个 **Achievements ** ，并set到Woter中去；
 

@@ -27,7 +27,7 @@ Java内存模型，描述了java程序中各种变量（**线程共享变量**�
 * 所有的变量都存在主内存中
 * 每个线程都有自己独立的工作内存，里面保存该线程使用到的变量的副本（主内存中该变量的一份copy）
 
-![](http://owqdwc45t.bkt.clouddn.com/jmm_01.png)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/java/jmm_01.png)
 
 共享变量的两条规定：
 * 线程对共享变量的所有操作都必须在自己的工作内存中进行，不能直接从主内存读写

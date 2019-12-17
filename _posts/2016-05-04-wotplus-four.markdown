@@ -28,7 +28,7 @@ tags:
 一开始使用的是一个搜的一个方法（继承AsyncTask的一个内部类），性能不是很好，于是后期直接换成：**Glide** 了，简便又好用；  
 `Glide.with(mContext).load(mWoter.getClanImgSrc()).into(((ClanViewHolder) holder).clanFlag);`  
 
-![静态首页完成图](http://7xsvfv.com1.z0.glb.clouddn.com/mainpageStatic.png)
+![静态首页完成图](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/mainpageStatic.png)
 
 ## 首页Adapter赋值
 
@@ -163,7 +163,7 @@ public void putWoterToPreference(Woter woter) {
 4. 判断是否有军团信息，若有：获取军团信息，并处理返回的json，将军团信息set到3中的Woter，获取数据完毕，开始将Woter交给 WoterAdapter绘制首页列表；若无：则获取数据完毕，开始将Woter交给 WoterAdapter绘制首页列表；
 
 由于我使用的是Volley，所以产生了以下 **迷之嵌套** ，（*容易使人头晕，慎看*）：  
-`getDataFromWeb()`方法： 
+`getDataFromWeb()`方法：
 
 ```
 /**
@@ -314,7 +314,7 @@ private void getDataFromWeb() {
 这个代码确实看的人头晕眼花的，所以，赶快的学习**RxJava和Retrofit**来重写它吧！  
 其中使用的jsoup解析html的工具方法就不再赘述了，已经在第一篇中阐述；  
 
-### 拼接动态的URL遇到的错误 
+### 拼接动态的URL遇到的错误
 
 之前测试用的都是静态的URL，所以要把真正的参数（昵称大区）进行URL的拼接；  
 当时很困惑的一个问题（曾在qq群发问）：  
@@ -363,7 +363,7 @@ deathWheelProgressDialog.dismiss();
 
 ```
 
-`DeathWheelProgressDialog` 类中的 `createDialog` 方法： 
+`DeathWheelProgressDialog` 类中的 `createDialog` 方法：
 
 ```
 public static DeathWheelProgressDialog createDialog(Context context) {
@@ -374,17 +374,17 @@ public static DeathWheelProgressDialog createDialog(Context context) {
 
     return deathWheelProgressDialog;
 }
-``` 
+```
 
 这个自定义Dialog我感觉是最初级的了，只是修改了Dialog的布局文件，而我的实现方式是在布局文件中展示一个gif图片（一个不停旋转的死亡之轮）；  这个我隐隐中感觉在性能上可能赶不上那种好多图实现一个动画效果的实现方式，但是也说不好差在哪儿，还是需要进一步学习下自定义控件；
 
 我的参照自定义ProgressDialog:  
 [http://blog.csdn.net/rohsuton/article/details/7518031](http://blog.csdn.net/rohsuton/article/details/7518031)
 
-![死亡之轮](http://7xsvfv.com1.z0.glb.clouddn.com/death-wheel.gif)
+![死亡之轮](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/death-wheel.gif)
 
 布局文件（*使用的在github上找的一个gif开源库*）：  
-*`compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'` ，好像还要添加repositories，具体见github:[android-gif-drawable](https://github.com/koral--/android-gif-drawable)* 
+*`compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'` ，好像还要添加repositories，具体见github:[android-gif-drawable](https://github.com/koral--/android-gif-drawable)*
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -405,27 +405,4 @@ public static DeathWheelProgressDialog createDialog(Context context) {
 ## 首页基本完成
 
 开始编写 **成就** 页面吧；  
-2016年5月15日00:00:50 by zhang.xx 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+2016年5月15日00:00:50 by zhang.xx

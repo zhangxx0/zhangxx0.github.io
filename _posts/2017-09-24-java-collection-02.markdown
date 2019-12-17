@@ -127,7 +127,7 @@ ArrayList中的操作**不是线程安全的**！所以，建议在单线程中�
     }
 ```
 示意图：  
-![](http://owqdwc45t.bkt.clouddn.com/148526680168618_ArrayList_add.png)
+![](https://gitee.com/zhangxx0/blog_image/raw/master/java/148526680168618_ArrayList_add.png)
 
 #### addAll()
 ```java

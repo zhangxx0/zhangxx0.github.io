@@ -16,10 +16,10 @@ tags:
 # 最后的修饰阶段
 
 所有的功能基本上已经开发完毕，剩余的就是bug的修正与页面的美化以及优化之类的了；
- 
+
 ## bug修改
 这个bug我留的还真不少，第一次总结就写了满满的一页：  
-![ 第一次bug整理 ](http://7xsvfv.com1.z0.glb.clouddn.com/wotplusbug.jpg)  
+![ 第一次bug整理 ](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplusbug.jpg)  
 
 上面的这些bug我都是一个接着一个的改的，碰到难的就先放一放，
 
@@ -106,7 +106,7 @@ query_button_press 代码：
 [ MaterialEditText教程博客 ](http://www.rengwuxian.com/post/materialedittext)  
 
 弄了个极简的样式：
-![查询信息框](http://7xsvfv.com1.z0.glb.clouddn.com/query.png)
+![查询信息框](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/query.png)
 
 主要代码：  
 
@@ -128,9 +128,9 @@ query_button_press 代码：
 
 #### 5、点击fab弹出的自定义dialog
 
-使用Activity创建对话框 `AtyQueryDialog` 
+使用Activity创建对话框 `AtyQueryDialog`
 
-![官方文档说明的自定义对话框](http://7xsvfv.com1.z0.glb.clouddn.com/zidingyidialog.png)  
+![官方文档说明的自定义对话框](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/zidingyidialog.png)  
 
 Manifest文件中制定其主题：  
 
@@ -159,7 +159,7 @@ fab.setOnClickListener(new View.OnClickListener() {
 ```
 
 效果图：
-![fab query](http://7xsvfv.com1.z0.glb.clouddn.com/fabquery.png)
+![fab query](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/fabquery.png)
 
 #### 6、南北区区分
 南区账号查询时分析html出现空指针错误  
@@ -336,7 +336,7 @@ recyclerView.setAdapter(animatorAdapter);
 
 **Lint** 去除无用资源；  
 [使用Android Studio的lint清除无用的资源文件](http://waychel.com/shi-yong-android-studiode-lintqing-chu-wu-yong-de-zi-yuan-wen-jian/)
- 
+
 [Android APK瘦身经验总结](http://www.jianshu.com/p/bfe44ef18aca)
 
 图片压缩：  
@@ -348,28 +348,8 @@ recyclerView.setAdapter(animatorAdapter);
 ## 末
 
 开发的历程基本上结束了，剩余的就是打包上线的事情了，对了还有推广的事情，，，  
-这个也早就写了，写的也不是很全，见 [上架记录](http://amx1390.com/2016/05/08/wotplus-n/) 
+这个也早就写了，写的也不是很全，见 [上架记录](http://amx1390.com/2016/05/08/wotplus-n/)
 
 对于第一个正式版本0.6的技术开发历程，如有以后再补充吧，接下来使用新技术、增肌新功能当然会另有博客来阐述，所以，第一个版本，到这里吧！ 哎呀，我写了一天的博客了，，，
 
-2016年5月15日23:11:39 by zhang.xx 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+2016年5月15日23:11:39 by zhang.xx
