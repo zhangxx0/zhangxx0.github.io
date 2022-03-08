@@ -25,7 +25,7 @@ tags:
 启动命令：docker run -d -p 9411:9411 openzipkin/zipkin  
 [Zipkin Quickstart](https://zipkin.io/pages/quickstart.html)  
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/pringcloud-zipkin1.png)  
+![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-zipkin1.png)  
 ![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-zipkin2.png)  
 
 [SpringCloud 2020版本教程4：使用spring cloud sleuth+zipkin实现链路追踪](https://forezp.blog.csdn.net/article/details/115632914)  
