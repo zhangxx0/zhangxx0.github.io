@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "SpringCloud(2) - 博客大纲"
+title:      "SpringCloud(2) - 网关、熔断"
 subtitle:   "Happy tiger year！"
 date:       2022-01-03 00:00:00
 author:     "Zhangxx"

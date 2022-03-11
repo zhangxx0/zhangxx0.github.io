@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "SpringCloud(1) - 博客大纲"
+title:      "SpringCloud(1) - 注册、配置"
 subtitle:   "Happy tiger year！"
 date:       2022-01-01 00:00:00
 author:     "Zhangxx"
@@ -10,7 +10,7 @@ tags:
     - SpringCloud
 ---
 
-> 黄沙百战穿金甲，不破楼兰终不还.
+> 海日生残夜，江春入旧年.
 
 ## 前言
 ---

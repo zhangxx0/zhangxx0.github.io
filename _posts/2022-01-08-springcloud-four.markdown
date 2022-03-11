@@ -122,16 +122,16 @@ systemctl start docker.service
 
 同上；  
 
-部署完毕后的测试链接：
-http://101.43.186.49:8848/nacos
-http://101.43.186.49:15672/
-http://101.43.186.49:9411/zipkin/
+部署完毕后的测试链接：  
+http://101.43.186.49:8848/nacos  
+http://101.43.186.49:15672/  
+http://101.43.186.49:9411/zipkin/  
 
-product：
-http://82.156.237.145:8082/product/list
-order：
-http://82.156.237.145:8081/loadbanlanceTest?name=xinxin
-gateway：
-http://82.156.237.145:8088/order/loadbanlanceTest?name=xinxin
+product：  
+http://82.156.237.145:8082/product/list  
+order：  
+http://82.156.237.145:8081/loadbanlanceTest?name=xinxin  
+gateway：  
+http://82.156.237.145:8088/order/loadbanlanceTest?name=xinxin  
 
 
