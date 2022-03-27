@@ -28,7 +28,7 @@ tags:
 一开始使用的是一个搜的一个方法（继承AsyncTask的一个内部类），性能不是很好，于是后期直接换成：**Glide** 了，简便又好用；  
 `Glide.with(mContext).load(mWoter.getClanImgSrc()).into(((ClanViewHolder) holder).clanFlag);`  
 
-![静态首页完成图](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/mainpageStatic.png)
+![静态首页完成图](http://zhangxx0.gitee.io/blog_image/wotplus/mainpageStatic.png)
 
 ## 首页Adapter赋值
 
@@ -381,7 +381,7 @@ public static DeathWheelProgressDialog createDialog(Context context) {
 我的参照自定义ProgressDialog:  
 [http://blog.csdn.net/rohsuton/article/details/7518031](http://blog.csdn.net/rohsuton/article/details/7518031)
 
-![死亡之轮](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/death-wheel.gif)
+![死亡之轮](http://zhangxx0.gitee.io/blog_image/wotplus/death-wheel.gif)
 
 布局文件（*使用的在github上找的一个gif开源库*）：  
 *`compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'` ，好像还要添加repositories，具体见github:[android-gif-drawable](https://github.com/koral--/android-gif-drawable)*

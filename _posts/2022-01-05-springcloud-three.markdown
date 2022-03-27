@@ -25,31 +25,10 @@ tags:
 启动命令：docker run -d -p 9411:9411 openzipkin/zipkin  
 [Zipkin Quickstart](https://zipkin.io/pages/quickstart.html)  
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-zipkin1.png)  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-zipkin2.png)  
+![](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-zipkin1.png)  
+![](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-zipkin2.png)  
 
 [SpringCloud 2020版本教程4：使用spring cloud sleuth+zipkin实现链路追踪](https://forezp.blog.csdn.net/article/details/115632914)  
 
-## Nacos
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-nacos1.png)  
-
-[SpringCloud 2020版本教程1：使用nacos作为注册中心和配置中心](https://forezp.blog.csdn.net/article/details/115632826)  
-
-[官方快速开始](https://nacos.io/zh-cn/docs/quick-start-spring-cloud.html)  
-[使用Nacos作为配置中心](https://blog.csdn.net/forezp/article/details/90729945)  
-
-项目中yml配置只需：
-```xml
-cloud:
-  nacos:
-    config:
-      server-addr: 127.0.0.1:8848
-      file-extension: yaml
-      prefix: product
-    discovery:
-      server-addr: 127.0.0.1:8848
-```
-
-**注意：** nacos控制台中新建的配置文件名字的后缀应该为yaml，而不是yml；
 

@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## 前言  
+## 前言
 最近进入了新的公司，公司需要，同时也是自己的技术延伸方向，于是来研究下PRC框架dubbo，以及为之后的SOA服务化等做储备，dubbo已经出来好长时间了，据说github还停止维护过，一度导致要用当当的dubbo好像，好在现在是重新活跃的状态，可见dubbo的生命力还是很强的。  
 本篇主要还是做一个入门的展现，至于dubbo底层是怎么实现的，什么netty什么的暂时先不考虑，先会用了再来深究。  
 
@@ -30,9 +30,9 @@ tags:
 下面直接描述demo的搭建过程：  
 代码托管在github：[dubbo-demo](https://github.com/zhangxx0/dubbo-demo)
 
-## （1）创建idea Maven项目，并新建3个Module  
+## （1）创建idea Maven项目，并新建3个Module
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/dubbo-1.png)
+![](http://zhangxx0.gitee.io/blog_image/java/dubbo-1.png)
 
 ## （2）编写providerapi Module代码
 
@@ -49,7 +49,7 @@ tags:
   }
 ```
 
-## （3）编写provider Module代码  
+## （3）编写provider Module代码
 **服务提供者**:  
 
 **添加pom依赖**：  
@@ -190,7 +190,7 @@ public class DemoPrividerTest {
 
 ## （4）启动服务提供者，在dubbo admin中查看其是否注册成功
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/dubbo-2.png)
+![](http://zhangxx0.gitee.io/blog_image/java/dubbo-2.png)
 
 ## （5）编写consumer Module代码
 **服务消费者**:  
@@ -241,9 +241,9 @@ public class Consumer {
 
 ## （6）运行消费提供则代码，在dubbo admin中查看其是否注册成功
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/dubbo-3.png)  
+![](http://zhangxx0.gitee.io/blog_image/java/dubbo-3.png)  
 
-## 遇到的两个问题：  
+## 遇到的两个问题：
 
 1.**处理（4）时遇到错误：Caused by: java.lang.ClassNotFoundException: javassist.ClassPath**  
 由于是粘贴的demo中的pom配置，但是jar都没有配置version属性，导致好像jar包没有形成依赖，但是Spring的jar自动就形成依赖了，这个地方即上述的那个问题，暂时不知道它是怎么直接引入的，待查；
@@ -252,9 +252,9 @@ public class Consumer {
 服务消费者的pom引入的是api的依赖；这没有问题;  
 将DemoProviderTest即注册服务提供者的class点击红方块关闭之后，重新编译代码，并调用，得到正确的返回结果；  
 
-## 几个疑问？？？  
+## 几个疑问？？？
 1.**官方的demo中，为什么要给提供者再做一个API的项目，然后在提供者工程中导入API工程的依赖，为什么要分为两个工程来实现这个功能呢？ 这样有什么优点?**  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/dubbo-4.png)
+![](http://zhangxx0.gitee.io/blog_image/java/dubbo-4.png)
 
 2.**注册中心和监控中心都是可选的， 服务消费者可以直连服务提供者那为什么还要使用注册中心呢，有什么好处吗？**  
 [zookeeper在Dubbo中扮演了一个什么角色，起到了什么作用啊？](https://www.zhihu.com/question/25070185)  
@@ -272,7 +272,7 @@ public class Consumer {
 
 dubbo的使用，其实只需要有注册中心，消费者，提供者这三个就可以使用了，但是并不能看到有哪些消费者和提供者，为了更好的调试，发现问题，解决问题，因此引入dubbo-admin。通过dubbo-admin可以对消费者和提供者进行管理。
 
-## dubbo monitor的配置  
+## dubbo monitor的配置
 ```java
   TODO
 ```
@@ -282,7 +282,7 @@ dubbo的使用，其实只需要有注册中心，消费者，提供者这三个
   TODO
 ```
 
-## 总结与参考  
+## 总结与参考
 这里只是简单的一个dubbo入门的例子，至于dubbo怎么和SSM进行结合编程，以及之后与MQ等框架的结合，需要进一步的学习；
 
 2017年11月16日00:24:54

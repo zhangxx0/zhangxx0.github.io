@@ -54,7 +54,7 @@ Eureka是Netflix开发的服务发现框架，本身是一个基于REST的服务
 
 ## Nacos
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-nacos1.png)  
+![](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-nacos1.png)  
 
 [SpringCloud 2020版本教程1：使用nacos作为注册中心和配置中心](https://forezp.blog.csdn.net/article/details/115632826)  
 
@@ -134,5 +134,5 @@ SpringCloud Bus 总线；webhook
 [order 订单服务](https://github.com/zhangxx0/order)  
 [api-gateway 服务网关](https://github.com/zhangxx0/api-gateway)  
 
-![简单的画个架构图](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-first-demo-framework.png)  
+![简单的画个架构图](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-first-demo-framework.png)  
 

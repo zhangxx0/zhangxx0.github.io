@@ -22,7 +22,7 @@ Java 容器里只能放对象，对于基本类型（int, long, float, double �
 
 ## 概览
 工具包框架图：  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/jhtotal02.jpg)
+![](http://zhangxx0.gitee.io/blog_image/java/jhtotal02.jpg)
 
 #### Collection接口(集合)
 * List、Set和Queue接口的父接口  

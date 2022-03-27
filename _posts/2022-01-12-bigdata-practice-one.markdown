@@ -26,7 +26,7 @@ tags:
 
 ## 数据插入
 
-![数据插入时资源消耗情况](https://gitee.com/zhangxx0/blog_image/raw/master/dockerbigdata/bigdata-mysql-writein.png)  
+![数据插入时资源消耗情况](http://zhangxx0.gitee.io/blog_image/dockerbigdata/bigdata-mysql-writein.png)  
 
 ```sql
 # 查看mysql库各表容量大小
@@ -44,7 +44,7 @@ order by data_length desc, index_length desc;
 使用上面的SQL查看数据的插入情况时，发现其统计的数据不准确；  
 通过修改`information_schema_stats_expiry`参数为`0`后，统计偏差变小，但仍不是准确数据  
 
-![统计偏差](https://gitee.com/zhangxx0/blog_image/raw/master/dockerbigdata/bigdata-mysql-100w.png)  
+![统计偏差](http://zhangxx0.gitee.io/blog_image/dockerbigdata/bigdata-mysql-100w.png)  
 
 [MySQL8.0的information_schema.tables信息不准确](https://www.cxyzjd.com/article/londa/90480266)  
 

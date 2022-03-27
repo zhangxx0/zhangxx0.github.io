@@ -43,7 +43,7 @@ tags:
 使用令牌桶算法的限流拦截器，使用jmeter压测配置了RequestRateLimiter过滤器的链接，配置100线程，循环间隔1s，部分请求通过，redis中存储了两个key，由此RequestRateLimiter是使用**redis**进行限流的；线程为10时可能看不到这俩key，因为这俩key是随即销毁的；    
 [spring cloud gateway 之限流篇](https://www.fangzhipeng.com/springcloud/2018/12/22/sc-f-gatway4.html)  
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-gateway1.png)
+![](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-gateway1.png)
 
 [SpringCloud 2020版本教程2：使用spring cloud gateway作为服务网关](https://forezp.blog.csdn.net/article/details/115632853)  
 

@@ -19,7 +19,7 @@ tags:
 
 ## bug修改
 这个bug我留的还真不少，第一次总结就写了满满的一页：  
-![ 第一次bug整理 ](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplusbug.jpg)  
+![ 第一次bug整理 ](http://zhangxx0.gitee.io/blog_image/wotplus/wotplusbug.jpg)  
 
 上面的这些bug我都是一个接着一个的改的，碰到难的就先放一放，
 
@@ -106,7 +106,7 @@ query_button_press 代码：
 [ MaterialEditText教程博客 ](http://www.rengwuxian.com/post/materialedittext)  
 
 弄了个极简的样式：
-![查询信息框](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/query.png)
+![查询信息框](http://zhangxx0.gitee.io/blog_image/wotplus/query.png)
 
 主要代码：  
 
@@ -130,7 +130,7 @@ query_button_press 代码：
 
 使用Activity创建对话框 `AtyQueryDialog`
 
-![官方文档说明的自定义对话框](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/zidingyidialog.png)  
+![官方文档说明的自定义对话框](http://zhangxx0.gitee.io/blog_image/wotplus/zidingyidialog.png)  
 
 Manifest文件中制定其主题：  
 
@@ -159,7 +159,7 @@ fab.setOnClickListener(new View.OnClickListener() {
 ```
 
 效果图：
-![fab query](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/fabquery.png)
+![fab query](http://zhangxx0.gitee.io/blog_image/wotplus/fabquery.png)
 
 #### 6、南北区区分
 南区账号查询时分析html出现空指针错误  

@@ -42,13 +42,13 @@ tags:
 
 
  **战车类型列表** 图：  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankpage11.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/tankpage11.jpg)
 
 **各类型战车列表** 图：  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankpage22.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/tankpage22.jpg)
 
 **坦克详细战绩页面** 图：  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankpage3.png)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/tankpage3.png)
 
 
 ## 两个问题
@@ -56,7 +56,7 @@ tags:
 #### 1、上滑时toolbar只隐藏一半的问题
 
 错误图：  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tankproblem2.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/tankproblem2.jpg)
 
 
 [ 参照 toolbar的使用 ](https://guides.codepath.com/android/Handling-Scrolls-with-CoordinatorLayout#floating-action-buttons-and-snackbars)

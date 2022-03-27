@@ -37,23 +37,23 @@ tags:
 然后在23：21分，开始在 **坦克世界吧** 发帖：[05-06【原创】国服坦克世界战绩查询APP（安卓）WOTPlus](http://tieba.baidu.com/p/4530207210?pn=1)  
 然后一直看着帖子的进展，这么晚了，回复的基本是10级以上的老油条了，我认真的回复每条回复，时不时的顶下帖子，只为了让更多的人看见，就这样，一直到5.7号凌晨一点半，fir.im的下载量是91，魅族商店的下载量是13，两个来小时的时间超过100了！于是我心满意足的睡觉了，因为明天还要练车，当然睡之前没有忘了艾特下大吧龙井sky；  
 第二天，准确的来说还是分发的第一天，我十点钟爬起来赶忙在多玩论坛上发帖子，发完赶紧去驾校练车去了，其实一边练车一边回复帖子，主要还是顶一下让更多的人看到，晚上回到家，电脑看贴的时候发现来着大吧主 **龙井sky** 的加精消息！激动的要跳起来！可会坦吧首页一看，怎么找不到我的帖子的，又被刷下去了？仔细一看原来在置顶里，简直高兴的不行了！  
-![ 贴吧记录图 ]https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tanba0001.jpg)  
+![ 贴吧记录图 ]http://zhangxx0.gitee.io/blog_image/wotplus/tanba0001.jpg)  
 
 截至5.8号凌晨1点左右，有了 **650** 左右的下载量，于是我定下了分发第二天的下载量要超过一k：
 
 截至5.8号23点，产生了下面的数据，总计 **1333** 下载量：  
-![ 三平台下载量图 ]https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tanba0002.jpg)  
+![ 三平台下载量图 ]http://zhangxx0.gitee.io/blog_image/wotplus/tanba0002.jpg)  
 有个地方还是要说，应用宝里有一条恶意的1分评论，看了实在是不舒服，，，但是绝大多数吧友或者woter都是鼓励和支持的，我也收到了很多的反馈与建议，我感觉我的帖子在坦吧受到的是在1024才有的待遇，感谢理性而又识货的坦克世界吧友！感谢你们！  
 
 还有出人意料的是，今天上午我的支付宝响了，，，于是有了下面这幅图：  
-![ 支付宝 ]https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/tanba0003.jpg)  
+![ 支付宝 ]http://zhangxx0.gitee.io/blog_image/wotplus/tanba0003.jpg)  
 
 说实话这是我做软件以来第一次收到用户的转账（当然这也是我的第一个app），真是高兴的不行！十分感谢这两位朋友，虽然我们素昧平生，于是我机智的贴上我的支付宝二维码，感觉自己是个旧时候卖艺的艺人，有钱的捧个钱场，没钱的捧个人场，决不强求：  
-![支付宝二维码](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/zhifubao)  
+![支付宝二维码](http://zhangxx0.gitee.io/blog_image/amx1390/zhifubao)  
 
 2016年5月9日00:26:07 今天就先写到这儿吧，关于下一步的计划、一些问题、以及IOS的事情我会再写一篇博客，先睡觉了，练车累成狗。
 
-## 上线第三天记录  
+## 上线第三天记录
 
 * fir.im 1393
 * flyme 210
@@ -63,7 +63,7 @@ tags:
 
 2016年5月9日22:33:07 休息；
 
-## 上线第四天记录  
+## 上线第四天记录
 
 * fir.im 1630
 * flyme 245
@@ -74,7 +74,7 @@ tags:
 
 2016年5月10日22:49:04 休息，明天要去看科三的考场了！
 
-## 上线第五天记录  
+## 上线第五天记录
 
 * fir.im 1766   
 * flyme 273
@@ -84,7 +84,7 @@ tags:
 
 2016年5月11日21:24:49 今天没看成考场，明天两点半起起看考场，也是日了狗；
 
-## 上线第六天记录  
+## 上线第六天记录
 
 * fir.im 1872   
 * flyme 293
@@ -94,7 +94,7 @@ tags:
 
 2016年5月12日22:30:15 明天考科三！  
 
-## 上线第七天记录  
+## 上线第七天记录
 
 * fir.im 1945     
 * flyme 303
@@ -105,11 +105,11 @@ tags:
 
 2016年5月13日23:02:15 科三满分一把过，了却一桩心事。
 
-## 一周下载情况统计  
+## 一周下载情况统计
 
-![WOTPlus一周下载总量趋势](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/WOTPlus%E4%B8%80%E5%91%A8%E4%B8%8B%E8%BD%BD%E6%80%BB%E9%87%8F%E8%B6%8B%E5%8A%BF.png)  
-![WOTPlus各平台一周下载量](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/WOTPlus%E5%90%84%E5%B9%B3%E5%8F%B0%E4%B8%80%E5%91%A8%E4%B8%8B%E8%BD%BD%E9%87%8F.png)  
-![WOTPlus一周日下载总量趋势](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/WOTPlus%E4%B8%80%E5%91%A8%E6%97%A5%E4%B8%8B%E8%BD%BD%E6%80%BB%E9%87%8F%E8%B6%8B%E5%8A%BF.png)  
+![WOTPlus一周下载总量趋势](http://zhangxx0.gitee.io/blog_image/wotplus/WOTPlus%E4%B8%80%E5%91%A8%E4%B8%8B%E8%BD%BD%E6%80%BB%E9%87%8F%E8%B6%8B%E5%8A%BF.png)  
+![WOTPlus各平台一周下载量](http://zhangxx0.gitee.io/blog_image/wotplus/WOTPlus%E5%90%84%E5%B9%B3%E5%8F%B0%E4%B8%80%E5%91%A8%E4%B8%8B%E8%BD%BD%E9%87%8F.png)  
+![WOTPlus一周日下载总量趋势](http://zhangxx0.gitee.io/blog_image/wotplus/WOTPlus%E4%B8%80%E5%91%A8%E6%97%A5%E4%B8%8B%E8%BD%BD%E6%80%BB%E9%87%8F%E8%B6%8B%E5%8A%BF.png)  
 
 ## 5.16记录
 

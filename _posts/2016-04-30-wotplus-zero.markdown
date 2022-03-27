@@ -24,11 +24,11 @@ tags:
 
 _ _ _
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_xiaoguo2.jpg)
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_xiaoguo1.jpg)
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_xiaoguo3.jpg)
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_xiaoguo4.jpg)
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/wotplus_xiaoguo5.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/wotplus_xiaoguo2.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/wotplus_xiaoguo1.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/wotplus_xiaoguo3.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/wotplus_xiaoguo4.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/wotplus_xiaoguo5.jpg)
 
 ## 功能简介
 ---
@@ -83,7 +83,7 @@ WOTPlus遵循 **Material Design** 设计原则，使用最新的控件，诸如�
 
 或者直接扫描下面的二维码下载：  
 
-![二维码分发](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%88%86%E5%8F%91.png)
+![二维码分发](http://zhangxx0.gitee.io/blog_image/wotplus/%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%88%86%E5%8F%91.png)
 
 
 ## TODO
@@ -105,7 +105,7 @@ _ _ _
 
 
 差点忘了，土豪要是想打赏我的话，可以扫下面的支付宝(不说了，先去搬砖了)：
-![ Zhangxx的支付宝 ](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/zhifubao)
+![ Zhangxx的支付宝 ](http://zhangxx0.gitee.io/blog_image/amx1390/zhifubao)
 
 
 2016年4月30日23:15:18 by [zhangxx](http://amx1390.com)

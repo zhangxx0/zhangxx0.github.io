@@ -12,7 +12,7 @@ tags:
 
 > 将军未挂封侯印，腰间常悬带血刀.
 
-##  前言
+## 前言
 ---
 **WOTPlus** 终于终于终于又更新了一个版本，原因只有一个，，，我太懒了，，，
 
@@ -26,7 +26,7 @@ tags:
 
 然后就是新的一年了嘛，2018，朋友圈都说新的一年要奋斗啊，那祝你们奋斗顺利，我的愿望就是长点体重，然后常回家看看，然后顺其自然吧  
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/gouzi.png)
+![](http://zhangxx0.gitee.io/blog_image/amx1390/gouzi.png)
 
 对于APP还是那句话：**WOTPlus** 以 **官网战绩** 和 **XVM战绩** 为主体。
 
@@ -41,8 +41,8 @@ tags:
 
 _ _ _
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/0.9.6-1.jpg)
-![](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/0.9.6-2.jpg)
+![](http://zhangxx0.gitee.io/blog_image/amx1390/0.9.6-1.jpg)
+![](http://zhangxx0.gitee.io/blog_image/amx1390/0.9.6-2.jpg)
 
 
 ## 功能依照
@@ -78,7 +78,7 @@ _ _ _
 * 应用宝：[ WOTPlus-应用宝](http://android.myapp.com/myapp/detail.htm?apkName=com.xinxin.wotplus)
 * 魅族应用中心：[ WOTPlus-魅族应用中心 ](http://app.meizu.com/apps/public/detail?package_name=com.xinxin.wotplus)
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/weekend.png)
+![](http://zhangxx0.gitee.io/blog_image/amx1390/weekend.png)
 
 ## 关于作者
 _ _ _
@@ -92,6 +92,6 @@ Java 程序员；
 
 
 差点忘了，土豪要是想打赏我的话，可以扫下面的支付宝：
-![ Zhangxx的支付宝 ](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/zhifubao)
+![ Zhangxx的支付宝 ](http://zhangxx0.gitee.io/blog_image/amx1390/zhifubao)
 
 2018年1月2日00:53:37 凌晨依旧狗精神；

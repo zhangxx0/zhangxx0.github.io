@@ -12,7 +12,7 @@ tags:
 
 > I am back.
 
-##  前言
+## 前言
 ---
 **WOTPlus** 终于更新了一个版本，对于WOTPlus的第一批用户我感到十分的抱歉！因为我更新的实在太慢了，且期间功能出现了很大的问题。个中缘由，我简单的解释下，因为最近辞掉了毕业后的第一份工作，但是由于正处在一个APP项目的开发周期内，而我还是这个项目的核心开发，所以交接的一个月变得异常的忙碌，对于这个项目，一开始我是真不想做，主要是上次已经吃了这个客户的亏，不想再上第二次当，但是没办法，项目组没人了，只好又接手这个明知道会很难验收的项目，由于租的房子的到期原因，我离职的日期定在16号，距今天有10天的时间，这之前根本就没有时间来修改WOTPlus，期间空中网更新了一次战绩页面，改变了成就勋章页面的数据格式，于是直接导致了 **0.6 版本** 的WOTPlus各种报错，除了主页别的页面全部崩溃，也感谢邮件反馈信息给我的玩家，这让我心急如焚，但是没有办法，没有时间来修复这些问题，希望WOTPlus的用户能谅解；
 
@@ -31,8 +31,8 @@ tags:
 
 _ _ _
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/xvm_show0.jpg)
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/xvm_show1.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/xvm_show0.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/xvm_show1.jpg)
 
 
 ## 新增XVM功能简介

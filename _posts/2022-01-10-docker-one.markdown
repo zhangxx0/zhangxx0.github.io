@@ -81,7 +81,7 @@ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/amx1390/product:[镜像�
 docker push registry.cn-hangzhou.aliyuncs.com/amx1390/product:[镜像版本号]
 ```
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/dockerbigdata/springcloud-server-alibabadocker.png)
+![](http://zhangxx0.gitee.io/blog_image/dockerbigdata/springcloud-server-alibabadocker.png)
 
 
 ## Docker Compose

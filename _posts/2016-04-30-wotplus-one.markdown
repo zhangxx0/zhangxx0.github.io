@@ -49,7 +49,7 @@ tags:
 再者就是坦克世界官网的微信账号了，里面有查询战绩的页面，之前的一个版本是很简单，信息量太少；后来五周年换了一个版本，结果数据却是来自《捞月狗》，这，，，这也比较扯淡，自己的数据自己处理不好，反倒成了从别人的地方拿来的了，，，手动鄙视
 
 于是我就不淡定了，分析了下官网的战绩页面，刷刷刷就画了个APP的”设计图"，如下：
-![ WOTPlus手绘设计图 ](https://gitee.com/zhangxx0/blog_image/raw/master/amx1390/wotplus-design-hand2.png)
+![ WOTPlus手绘设计图 ](http://zhangxx0.gitee.io/blog_image/amx1390/wotplus-design-hand2.png)
 
 把整个战绩页面分成了一个APP的样子，甚至在上么标注了那个页面用什么控件实现，，，  
 实在是有些low，当时也是想做一个快速原型嘛，也管不了那么多了；

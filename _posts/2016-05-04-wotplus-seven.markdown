@@ -19,22 +19,22 @@ tags:
 
 ## 关于页面
 
-#### fir.im 检查更新  
+#### fir.im 检查更新
 
 检查更新逻辑图：
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/firim.jpg)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/firim.jpg)
 
 使用 **fir.im** 的 [版本查询接口](http://fir.im/docs/version_detection)，编写一个工具方法：`checkVersion` ；通过对比版本号和版本名称来检测是否有更新，若有，则打开一个 `AlertDialog` ，进行下载；若没有，则提示已是最新版本；  
 具体代码不想再贴了，没什么技术含量；
 
-#### 使用 NestedScrollView 出现冲突  
+#### 使用 NestedScrollView 出现冲突
 关于页面使用的是Activity填充Fragment的方式，而Fragment继承自 `PreferenceFragment` ，于是只要配置一个xml文件就可以了；  
 起初，我打算在外层的Activity的布局文件中使用折叠的toolbarlayout放个图片好看一些，但是使用 NestedScrollView 包含关于选项时，不能向下滑动到底；  
 原因推测：与 `PreferenceFragment` 中使用的listView滑动冲突了；  
 [NestedScrollView 之 ScrollView 嵌套 ListView](http://blog.csdn.net/iknownu/article/details/50476023)  
 看了一下，没怎么看懂，还是使用普通的简洁**关于**页面吧。
 
-#### 其余的一些功能  
+#### 其余的一些功能
 应用介绍、个人博客之类，使用了链接`uri`的跳转；  
 分享使用了`Intent.createChooser`；  
 点赞、打赏使用了 `AlertDialog` ；  
@@ -42,7 +42,7 @@ github、邮箱等使用了 `copyToClipboard` 方法，复制到剪切板；
 
 ## 设置页面
 
-#### 清除缓存  
+#### 清除缓存
 这个基本上是把 **NBAPlus** 项目的清除缓存功能搬过来的，主要有获取缓存大小和清除缓存两个功能，清除的缓存包括：内部缓存、外部缓存和自定义缓存；  
 获取和删除的时候，都使用了 **递归**，保证每个路径下所有文件夹的文件都能遍历到；  
 

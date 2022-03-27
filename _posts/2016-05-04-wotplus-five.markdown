@@ -16,11 +16,11 @@ tags:
 
 昨天把首页的基本写完了，现在来继续阐述 **成就** **统计** **等级**页面的编写过程；
 
-## 成就页面  
+## 成就页面
 
 前期已经获取到了成就页所需要的数据 **Woter.getAchievements**，然后创建 `AchieveMentFragment` 来replace 主页的空白区域；  
 
-![手绘成就页设计图](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/AchievementsHandDesign.jpg)  
+![手绘成就页设计图](http://zhangxx0.gitee.io/blog_image/wotplus/AchievementsHandDesign.jpg)  
 
 成就的页面采用的是一个嵌套的 **RecyclerView** ，外层使用 `LinearLayoutManager (VERTICAL)`，内层使用 `GridLayoutManager`，因此这里也使用了两个 **Adapter**：`AchieveMentAdapter` 和 `AchieveAdapter` ，前者是分类的成就信息块，后者是单个的成就信息；  
 在 `AchieveAdapter` 中提供点击的回调：  
@@ -75,7 +75,7 @@ if (mOnItemClickLitener != null)
 
 这个页面的编写比预计的要顺利，初步的编写完成样子：  
 
-![成就页面原型](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/achievementpage.jpg)
+![成就页面原型](http://zhangxx0.gitee.io/blog_image/wotplus/achievementpage.jpg)
 
 由于比较顺利，所以写完这个页面我就去玩坦克了，，，这毅力也是弱的一笔，然后当时还在看 **Game of Thrones** 前五季的第二遍，那天晚上看到了第三季，有一个镜头是Jon Snow和亿格瑞特的great wall的拥抱，感觉镜头好美，还截了图；  
 
@@ -85,7 +85,7 @@ if (mOnItemClickLitener != null)
 ## 统计页面
 
 设计图：  
-![设计图](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/badgerecordhanddesign.jpg)
+![设计图](http://zhangxx0.gitee.io/blog_image/wotplus/badgerecordhanddesign.jpg)
 
 统计页面的数据获取也是在之前的工具方法中完成，不再赘述；
 
@@ -126,7 +126,7 @@ if (mOnItemClickLitener != null)
 
 [http://www.jianshu.com/p/1078568e859f](http://www.jianshu.com/p/1078568e859f)
 
-![ NestedScollView ](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/nestedScollView.png)
+![ NestedScollView ](http://zhangxx0.gitee.io/blog_image/wotplus/nestedScollView.png)
 
 关于ScrollView内部空间不能完全填充的问题：
 [http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0704/1629.html](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0704/1629.html)
@@ -142,22 +142,22 @@ if (mOnItemClickLitener != null)
 ```
 
 初步效果图：  
-![徽章与战绩](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/badgeandrecordpage2.jpg)
+![徽章与战绩](http://zhangxx0.gitee.io/blog_image/wotplus/badgeandrecordpage2.jpg)
 
 #### 类型与国家页面
 
 同样使用 **MPAndroidChart**，不再赘述；
 
 初步效果图：  
-![类型与国家](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/typeandcountrypage2.jpg)
+![类型与国家](http://zhangxx0.gitee.io/blog_image/wotplus/typeandcountrypage2.jpg)
 
 ## 等级页面
 
 设计图：  
-![设计图](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/gradehanddesign.jpg)
+![设计图](http://zhangxx0.gitee.io/blog_image/wotplus/gradehanddesign.jpg)
 
 等级页面的数据获取遇到些问题，等级的数据在html中没有**直接显示**的数据，使用的是js的databind的方式，如图：  
-![等级数据html源码图](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/gradedata.png)
+![等级数据html源码图](http://zhangxx0.gitee.io/blog_image/wotplus/gradedata.png)
 
 也就是说，等级数据是Ajax异步获取的；
 
@@ -168,7 +168,7 @@ if (mOnItemClickLitener != null)
 这也就是之前获取用户信息时所遇到的那个问题，正是在这个地方解决的，我的做法是：  
 先比较两个请求的信息，如图，上面是页面点击，下面是放入浏览器中：  
 
-![请求对比](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/graderequest.jpg)
+![请求对比](http://zhangxx0.gitee.io/blog_image/wotplus/graderequest.jpg)
 
 比较发现 **Request Header** 中的 Accept 不一样（当时还没意识到其实 `X-Requested-With` 是很重要的），下面的请求中是不包含 **json** 类型的；尝试用代码设置Accept；搜索：volley设置header
 这里也耗费了好多时间，google了好久，才渐渐找到答案，参考链接：[Android Volley - BasicNetwork.performRequest: Unexpected response code 400](http://stackoverflow.com/questions/26796965/android-volley-basicnetwork-performrequest-unexpected-response-code-400)
@@ -205,7 +205,7 @@ public Map<String, String> getHeaders() throws AuthFailureError {
 获取到 json 之后就好办了，使用 RecyclerView 展示，不再赘述；
 
 初步效果图：  
-![ 等级列表 ](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/badgepage.png)
+![ 等级列表 ](http://zhangxx0.gitee.io/blog_image/wotplus/badgepage.png)
 
 #### 一个`ViewPagerAdapter`问题
 
@@ -218,7 +218,7 @@ nav切换之后，再切换回统计页面时，两个viewpager都为空白；
 [http://stackoverflow.com/questions/25574234/viewpager-oncreateview-is-not-always-called](http://stackoverflow.com/questions/25574234/viewpager-oncreateview-is-not-always-called)  
 [http://developer.android.com/intl/zh-cn/reference/android/support/v4/app/FragmentPagerAdapter.html](http://developer.android.com/intl/zh-cn/reference/android/support/v4/app/FragmentPagerAdapter.html)   
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/wotplus/fragmentproblem.png)
+![](http://zhangxx0.gitee.io/blog_image/wotplus/fragmentproblem.png)
 
 这个问题的原因，应该就是出在这个Adapter上；
      更换为：`FragmentStatePagerAdapter`

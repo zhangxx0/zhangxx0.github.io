@@ -23,7 +23,7 @@ HashMap 实现了 Map 接口，即允许放入key为null的元素，也允许插
 HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。  
 根据对冲突的处理方式不同，哈希表有两种实现方式，一种开放地址方式（Open addressing），另一种是冲突链表方式（Separate chaining with linked lists）。Java HashMap 采用的是 **冲突链表方式**。  
 HashMap结构图：  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/148526920663924_HashMap_base.png)  
+![](http://zhangxx0.gitee.io/blog_image/java/148526920663924_HashMap_base.png)  
 从上图容易看出，如果选择合适的哈希函数，put()和get()方法可以在常数时间内完成。但在对 HashMap 进行迭代时，需要遍历整个 table 以及后面跟的冲突链表。因此对于迭代比较频繁的场景，不宜将 HashMap 的初始大小设的过大。
 
 有两个参数可以影响 HashMap 的性能：初始容量（inital capacity）和负载系数（load factor）。初始容量指定了初始table的大小，负载系数用来指定自动扩容的临界值。当entry的数量超过capacity*load_factor时，容器将自动扩容并重新哈希。对于插入元素较多的场景，将初始容量设大可以减少重新哈希的次数。  
@@ -50,7 +50,7 @@ HashMap结构图：
 - (3)针对这种情况，JDK 1.8 中引入了红黑树（查找时间复杂度为 O(logn)）来优化这个问题  
 
 HashMap是数组+链表+红黑树（JDK1.8增加了红黑树部分）实现  
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/hashMap%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E5%9B%BE.png)
+![](http://zhangxx0.gitee.io/blog_image/java/hashMap%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E5%9B%BE.png)
 
 HashMap通常作为桶式哈希表，当桶变得很大的时候就转化为树结点，和TreeMap中比较类似，一般达到过量数据的时机比较少，所以在桶式哈希表中会尽量推迟树形结点的检测  
 

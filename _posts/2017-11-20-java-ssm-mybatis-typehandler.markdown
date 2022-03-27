@@ -15,7 +15,7 @@ tags:
 
 ---
 
-## 前言  
+## 前言
 这篇博文是偶来得之，今天在做SSM框架集成ElasticSearch的demo，先弄了个空的SSM框架，然后写了个简单的list查询，其中有个字段sex（性别），想用 **枚举** 来实现以下，因为之前用枚举类型比较少，正好借助这个熟练下，却想不到也遇到了不少的坑，花了两个多小时的时间，才实现了这个简单的功能。  
 
 ## 概览
@@ -53,7 +53,7 @@ public enum  SexEnum {
 }
 ```
 
-## 枚举映射Handler  
+## 枚举映射Handler
 
 继承`BaseTypeHandler`，并重写其四个方法：  
 
@@ -131,7 +131,7 @@ public class UserDemo {
 }
 ```
 
-## MyBatis的xml文件修改  
+## MyBatis的xml文件修改
 
 ```xml
 <!DOCTYPE mapper
@@ -172,7 +172,7 @@ public class UserDemo {
 ```
 
 
-## 总结与参考  
+## 总结与参考
 
 
 参考：  

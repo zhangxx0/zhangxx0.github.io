@@ -126,7 +126,7 @@ Node内部类
     }
 ```
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/148526704726154_LinkedList_add.png)
+![](http://zhangxx0.gitee.io/blog_image/java/148526704726154_LinkedList_add.png)
 
 #### remove()
 remove()方法也有两个版本，一个是删除跟指定元素相等的第一个元素remove(Object o)，另一个是删除指定下标处的元素remove(int index)。
@@ -186,7 +186,7 @@ remove()方法也有两个版本，一个是删除跟指定元素相等的第一
 ```
 两个删除操作都要 1. 先找到要删除元素的引用，2. 修改相关引用，完成删除操作。在寻找被删元素引用的时候remove(Object o)调用的是元素的equals方法，而remove(int index)使用的是下标计数，两种方式都是线性时间复杂度。在步骤 2 中，两个revome()方法都是通过unlink(Node<E> x)方法完成的。这里需要考虑删除元素是第一个或者最后一个时的边界情况。
 
-![](https://gitee.com/zhangxx0/blog_image/raw/master/java/148526706581863_LinkedList_remove.png)
+![](http://zhangxx0.gitee.io/blog_image/java/148526706581863_LinkedList_remove.png)
 
 #### get()
 ```java
