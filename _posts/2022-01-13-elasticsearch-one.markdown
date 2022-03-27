@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "ElasticSearch 昨日重相逢"
+title:      "Elasticsearch 昨日重相逢"
 subtitle:   "Happy tiger year！"
 date:       2022-01-13 00:00:00
 author:     "Zhangxx"
@@ -27,6 +27,9 @@ tags:
 使用Elasticsearch的版本：`7.17.1`  
 
 [JEST - This project is no longer being actively developed](https://github.com/searchbox-io/Jest)  
+
+![残存的适配不了2k的蛋壳官网](https://gitee.com/zhangxx0/blog_image/raw/master/elasticsearch/elasticsearch-danke.png)  
+
 
 ## 安装
 
@@ -64,7 +67,7 @@ RUN rm -rf /tmp/*
 
 
 参照：  
-[ Install Elasticsearch with Docker](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/docker.html)  
+[Install Elasticsearch with Docker](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/docker.html)  
 [使用Docker搭建本地ES集群加kibana和IK中分分词插件](https://www.jianshu.com/p/ed66670e9e7a)  
 [Elasticsearch —— docker部署+ik分词器(**未使用**)](https://www.jianshu.com/p/d8b0c736070f)  
 
@@ -90,6 +93,59 @@ ES的这个修改还是挺有意思的，纠正了错误的类比，ES并不是S
 
 ## ES原理
 
+Elasticsearch是实时(**Near Realtime**(NRT))全文搜索和分析引擎，提供搜集、分析、存储数据三大功能；是一套开放REST和JAVA API等结构提供高效搜索功能，可扩展的分布式系统。构建于Apache Lucene搜索引擎库之上。
+
+  ### 倒排索引
+  
+  倒排索引（Inverted Index）也叫反向索引，有反向索引必有正向索引。通俗地来讲，正向索引是通过key找value，反向索引则是通过value找key。
+
+  倒排索引服务于es查询操作，对数据的聚合、排序则需要使用正排索引。  
+
+  建立倒排索引前，会根据分词器对每个单词进行`normalization`（时态转换，单复数转换）；  
+
+  注意：
+  对于分词的field进行聚合（aggregation）操作，需要将fielddata设置为true，否则会报错提示你打开fielddata、将正排索引加载到内存中
+
+  ### 一个field索引两次来解决字符串排序问题
+  
+  将一个string field建立两次索引，一个分词，用来进行搜索；一个不分词，用来进行排序  
+
+  ```json
+    "finance": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "ignore_above": 256,
+                "type": "keyword"
+              }
+            }
+          }
+
+  ```
+
+  ### 相关度评分TF&IDF算法
+  
+  Elasticsearch使用的是 term frequency/inverse document frequency算法，简称为TF/IDF算法；
+  - Term frequency：搜索文本中的各个词条在field文本中出现了多少次，出现次数越多，就越相关；
+  - Inverse document frequency：搜索文本中的各个词条在整个索引的所有文档中出现了多少次，出现的次数越多，就越不相关；
+
+
+  ### 分布式架构原理
+  
+  **shard和replica**：
+  
+  单台机器无法存储大量数据，ES 可以将一个索引中的数据切分为多个 shard，分布在多台服务器上存储。有了 shard 就可以横向扩展，存储更多数据，让搜索和分析等操作分布到多台服务器上去执行，提升吞吐量和性能。每个 shard 都是一个 lucene index。  
+
+  任何一个服务器随时可能故障或宕机，此时 shard 可能就会丢失，因此可以为每个 shard 创建多个 replica 副本。replica 可以在 shard 故障时提供备用服务，保证数据不丢失，多个 replica 还可以提升搜索操作的吞吐量和性能。primary shard（建立索引时一次设置，不能修改，默认 5 个），replica shard（随时修改数量，默认 1 个），默认每个索引 10 个 shard，5 个 primary shard，5 个 replica shard，最小的高可用配置，是 2 台服务器。 shard 分为 primary shard 和 replica shard。而 primary shard 一般简称为 shard，而 replica shard 一般简称为 replica。
+
+  ![](https://gitee.com/zhangxx0/blog_image/raw/master/elasticsearch/es-cluster.png)  
+
+  ES 集群多个节点，会自动选举一个节点为 master 节点，这个 master 节点其实就是干一些管理的工作的，比如维护索引元数据、负责切换 primary shard 和 replica shard 身份等。要是 master 节点宕机了，那么会重新选举一个节点为 master 节点。
+
+  如果是非 master 节点宕机了，那么会由 master 节点，让那个宕机节点上的 primary shard 的身份转移到其他机器上的 replica shard。接着你要是修复了那个宕机机器，重启了之后，master 节点会控制将缺失的 replica shard 分配过去，同步后续修改的数据之类的，让集群恢复正常。
+
+  就是说如果某个非 master 节点宕机了。那么此节点上的 primary shard 不就没了。那好，master 会让 primary shard 对应的 replica shard（在其他机器上）切换为 primary shard。如果宕机的机器修复了，修复后的节点也不再是 primary shard，而是 replica shard。
+
 ## Java调用ES的方式
 
 - Spring Data Repositories
@@ -112,32 +168,62 @@ ES的这个修改还是挺有意思的，纠正了错误的类比，ES并不是S
 第三种，基于`elasticsearch-java`包以及`jackson`，我使用这个API做了个组合查询，代码如下：  
 ```java
 SearchResponse<BossJobIndex> search = client.search(s -> s
-                        .index(BOSS_JOB_INDEX)
-                        .query(q -> q
-                                .bool(b -> b
-                                        .must(must -> must
-                                                .multiMatch(m -> m
-                                                        .fields("name", "companyName")
-                                                        .query(bossJobSearchDto.getKeyword())
-                                                )
-
-                                        )
-                                        .must(must -> must
-                                                .term(t -> t
-                                                        .field("finance.keyword")
-                                                        .value(v -> v.stringValue(bossJobSearchDto.getFinance()))
-                                                )
-                                        )
-
+        .index(BOSS_JOB_INDEX)
+        .query(q -> q
+                .bool(b -> b
+                        .must(must -> must
+                                .multiMatch(m -> m
+                                        .fields("name", "companyName")
+                                        .query(bossJobSearchDto.getKeyword())
                                 )
-                        ),
-                BossJobIndex.class);
+
+                        )
+                        .must(must -> must
+                                .term(t -> t
+                                        .field("finance.keyword")
+                                        .value(v -> v.stringValue(bossJobSearchDto.getFinance()))
+                                )
+                        )
+
+                )
+        ),
+BossJobIndex.class);
 ```
 
 看到这样的流式编程代码不禁心情愉悦起来，比之前的RestClient不知道高到那里去了，逻辑也更加清晰，不得不说，真香~
 
+之前写蛋壳的房屋搜索一般先按照需求写出DSL，验证之后，再按照DSL实现java代码，实现后打印Java生成DSL与原DSL进行对比，对于复杂的查询这样编写可以减少出错；  
+
+
 
 [Elasticsearch8.0版本中Elasticsearch Java API Client客户端的基本使用方法](https://blog.csdn.net/anjiongyi/article/details/123391835)  
 
+[**Elasticsearch顶尖高手系列**笔记1-4篇](https://blog.vchar.top/dcs/1618405200.html#!)  
+
 Search微服务源码：
 [搜索引擎服务 search](https://github.com/zhangxx0/search)  
+
+## Boss爬虫的简单尝试
+
+- java的okhttp3+jsoup实现
+- java爬虫webmagic（GitHub）
+- java执行破解js获取cookie
+- python的爬虫（代理ip）
+
+爬取Boss数据主要作为ES的搜索练习使用，同时，近期也准备看机会，一举两得。  
+
+Boss直聘的反爬手段还是很到位的，不登录情况下，它的js自动生成了一个`cookie`，这个cookie复杂冗长，在GitHub上搜索了一下爬虫方案，用java实现的也有几个，如上述使用webmagic的一个项目，但已经年久失修并不能正常工作；  
+
+我自己则编写了第一种，使用jsoup解析了html，cookie则是直接从浏览器的headers中考的，其实网上绝大多数的实现都是这样，并没有几个真正破解了cookie，就算有人用python的selenium模拟，但基本上结果就是IP被封掉，我这个实现只能获取4页120条的数据，之后的就变成返回“请稍后”了，暂时用这些数据做测试；  
+
+从GitHub中发现了JS破解和爬虫逆向的一个项目，其中就有Boss直聘的js破解，然后这个算法我又不能搬到java里来，就想在java中跑这段js获取cookie，于是找到了`Rhono`这个东西，然而一番努力也没解决运行js时浏览器函数找不到的问题，导致js无法运行，获取cookie也就无从谈起，于是暂时搁置。
+
+还有一大批的python爬虫，不想做深入的研究了，感觉已Boss的反爬能力，再多努力估计也是竹篮打水，况且爬虫这个东西，，，还是少碰吧。  
+
+![boss_job_index索引数据](https://gitee.com/zhangxx0/blog_image/raw/master/elasticsearch/elasticsearch-boss-job-index-data.png)
+
+[用 java 作为爬虫抓取表情包斗图](https://www.javanorth.cn/2021/12/26/java-doutu-2022-01-07/#)  
+
+[Crack-JS-Spider](https://github.com/LoseNine/Crack-JS-Spider)  
+[JS破解专题 | 某直聘__zp_stoken__算法](https://mp.weixin.qq.com/s/Nxh5uR7Dr0ajO_6CdFVBAQ)  
+[Rhino: JavaScript in Java](https://github.com/mozilla/rhino)  

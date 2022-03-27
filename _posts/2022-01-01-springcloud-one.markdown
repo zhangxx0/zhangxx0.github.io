@@ -127,4 +127,12 @@ SpringCloud Bus 总线；webhook
 使用了Nacos之后，瞬间没了这种烦恼，一者兼具注册中心和配置中心两个核心功能，也不用再gitlab中写配置文件之类，个人感觉Nacos还是更简洁易用，令人神清气爽；  
 
 
+## 项目源码
+
+[eureka 注册中心](https://github.com/zhangxx0/eureka)  
+[product 商品服务](https://github.com/zhangxx0/product)  
+[order 订单服务](https://github.com/zhangxx0/order)  
+[api-gateway 服务网关](https://github.com/zhangxx0/api-gateway)  
+
+![简单的画个架构图](https://gitee.com/zhangxx0/blog_image/raw/master/springcloud/springcloud-first-demo-framework.png)  
 
