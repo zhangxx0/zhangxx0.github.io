@@ -1,16 +1,16 @@
 ---
 layout:     post
 title:      "亿级数据分库分表练习"
-subtitle:   "Happy tiger year！"
+subtitle:   ""
 date:       2022-01-12 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-wotplus-nine.png"
 catalog: true
 tags:
-    - java进阶
+    - Java进阶
 ---
 
-> 黄沙百战穿金甲，不破楼兰终不还.
+> 这才是人生难预料，不想团圆在今朝。回首繁华如梦渺，残生一线付惊涛。 柳暗花明休啼笑，善果心花可自豪。种福得福如此报，愧我当初赠木桃。
 
 ## 前言
 ---

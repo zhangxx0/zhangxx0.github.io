@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "SpringCloud(1) - 注册、配置"
-subtitle:   "Happy tiger year！"
+subtitle:   ""
 date:       2022-01-01 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-wotplus-nine.png"
