@@ -2,7 +2,7 @@
 layout:     post
 title:      "docker初始"
 subtitle:   ""
-date:       2022-01-10 00:00:00
+date:       2022-02-10 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-wotplus-nine.png"
 catalog: true
