@@ -16,9 +16,9 @@ tags:
 ---
 
 个人使用的是腾讯云的轻量应用服务器和云服务器，因为单用一台轻应用撑不起安装的这一整套东西，麻雀虽小，五脏俱全；  
-轻应用使用的是Docker基础镜像-CentOS7.6-Docker20，感觉还很方便；  
+轻应用使用的是Docker基础镜像- **CentOS7.6-Docker20**，感觉还很方便；  
 
-镜像仓库使用的是阿里云的**容器镜像服务**的镜像仓库个人实例，毕竟网易云的改了名，也不给个人开发者用了；  
+镜像仓库使用的是阿里云的 **容器镜像服务** 的镜像仓库个人实例，毕竟网易云的改了名，也不给个人开发者用了；  
 
 
 
@@ -100,7 +100,7 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
   at com.alibaba.nacos.client.config.impl
 ```
 
-尝试在新的云服务器上部署nacos  
+估计是这个轻应用服务器扛不住了，于是尝试在新的云服务器上部署nacos  
 新的腾讯服务器使用的并不是Docker基础镜像，需自己安装docker：  
 ```Shell
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
@@ -127,11 +127,11 @@ http://101.43.186.49:8848/nacos
 http://101.43.186.49:15672/  
 http://101.43.186.49:9411/zipkin/  
 
-product：  
+**product**：  
 http://82.156.237.145:8082/product/list  
-order：  
+**order**：  
 http://82.156.237.145:8081/loadbanlanceTest?name=xinxin  
-gateway：  
+**gateway**：  
 http://82.156.237.145:8088/order/loadbanlanceTest?name=xinxin  
 
 

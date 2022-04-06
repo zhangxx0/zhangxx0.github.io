@@ -21,8 +21,8 @@ tags:
 
 链路追踪
 
-使用Docker方式本地安装Zipkin  
-启动命令：docker run -d -p 9411:9411 openzipkin/zipkin  
+使用Docker方式本地安装 **Zipkin**  
+启动命令：`docker run -d -p 9411:9411 openzipkin/zipkin`  
 [Zipkin Quickstart](https://zipkin.io/pages/quickstart.html)  
 
 ![](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-zipkin1.png)  

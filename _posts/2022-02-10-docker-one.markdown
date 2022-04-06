@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "docker初始"
+title:      "docker quick-start"
 subtitle:   ""
 date:       2022-02-10 00:00:00
 author:     "Zhangxx"
@@ -16,7 +16,7 @@ tags:
 ## 前言
 ---
 
-学习**Docker**，主要是为了节约时间；  
+学习 **`Docker`**，主要是为了节约时间；  
 一次创建或配置，可以在任意地方正常运行，我认为这是Docker的核心所在；  
 
 
@@ -50,21 +50,23 @@ docker rmi image_id
 
 Dockerfile 是一个文本文件，其内包含了一条条的 指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
 
-所谓定制镜像，那一定是以一个镜像为基础，在其上进行定制。就像我们之前运行了一个 nginx 镜像的容器，再进行修改一样，基础镜像是必须指定的。而 FROM 就是指定 基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是第一条指令。
+所谓定制镜像，那一定是以一个镜像为基础，在其上进行定制。比如先运行了一个 nginx 镜像的容器，再进行修改一样，基础镜像是必须指定的。而 `FROM` 就是指定 基础镜像，因此一个 Dockerfile 中 `FROM` 是必备的指令，并且必须是第一条指令。
 
-RUN 指令是用来执行命令行命令的。由于命令行的强大能力，RUN 指令在定制镜像时是最常用的指令之一。其格式有两种：
-- shell 格式：RUN <命令>，就像直接在命令行中输入的命令一样。刚才写的 Dockerfile 中的 RUN 指令就是这种格式。
-- exec 格式：RUN ["可执行文件", "参数1", "参数2"]，这更像是函数调用中的格式。
+`RUN` 指令是用来执行命令行命令的。由于命令行的强大能力，`RUN` 指令在定制镜像时是最常用的指令之一。其格式有两种：
+- shell 格式：`RUN` <命令>，就像直接在命令行中输入的命令一样。刚才写的 Dockerfile 中的 `RUN` 指令就是这种格式。
+- exec 格式：`RUN` ["可执行文件", "参数1", "参数2"]，这更像是函数调用中的格式。
 
 构建镜像：  
-在Dockerfile所在目录执行docker build创建镜像  
+在Dockerfile所在目录执行 `docker build` 创建镜像  
 
 `docker build -t jpress:latest . `
 
-将制作的镜像上传到private registry  
+将制作的镜像上传到 **private registry**  
 
-`docker tag test docker.example.com/test
-docker push docker.example.com/test`
+```shell
+docker tag test docker.example.com/test
+docker push docker.example.com/test
+```
 
 
 **上传到阿里云镜像仓库：**   
@@ -82,7 +84,7 @@ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/amx1390/product:[镜像�
 docker push registry.cn-hangzhou.aliyuncs.com/amx1390/product:[镜像版本号]
 ```
 
-![](http://zhangxx0.gitee.io/blog_image/dockerbigdata/springcloud-server-alibabadocker.png)
+![阿里私有仓库图](http://zhangxx0.gitee.io/blog_image/dockerbigdata/springcloud-server-alibabadocker.png)
 
 
 ## Docker Compose
@@ -96,10 +98,8 @@ docker-compose down
 ```
 
 
+**参考**   
 
-
-
-**参考** 
 [Docker 从入门到实践](https://vuepress.mirror.docker-practice.com/)  
 [美团Docker相关文章](https://tech.meituan.com/tags/docker.html)  
 [配置阿里云镜像加速](https://blog.csdn.net/lizy0327/article/details/114024916)  

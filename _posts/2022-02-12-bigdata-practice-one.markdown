@@ -2,7 +2,7 @@
 layout:     post
 title:      "亿级数据分库分表练习"
 subtitle:   ""
-date:       2022-01-12 00:00:00
+date:       2022-02-12 00:00:00
 author:     "Zhangxx"
 header-img: "img/post-bg-wotplus-nine.png"
 catalog: true
@@ -18,10 +18,8 @@ tags:
 一次基于MySQL的亿级数据分库分表练习；  
 
 练习环境：  
-个人笔记本xps13，i7-8550U|16g|512g  
+个人笔记本 **xps13，i7-8550U|16g|512g**  
 建库前，将MySQL的数据存储位置转移到一个空闲较大的（约110g）的磁盘分区内，防止出现硬盘被写爆的情况；  
-
-
 
 
 ## 数据插入
@@ -49,7 +47,7 @@ order by data_length desc, index_length desc;
 [MySQL8.0的information_schema.tables信息不准确](https://www.cxyzjd.com/article/londa/90480266)  
 
 ```sql
-# (1)写入测试，post写入100行数据
+# (1)写入测试，100w行数据
 select count(*) from user; ## 10w 2.6s
 select count(*) from post; ## 100w 30s
 
@@ -105,10 +103,10 @@ ALTER TABLE post drop COLUMN info; # 836s
 
 这里使用`shardingsphere-jdbc`进行分库分表，配置文件如下：  
 
-分为4个库s0-s4，每个库中post分为4个表t_post0-t_post4，共16张表；  
+分为4个库 **s0-s4**，每个库中post分为4个表 **t_post0 - t_post4** ，共16张表；  
 具体的分配算法见`shardingAlgorithms`配置；  
 
-```shell
+```yaml
 dataSources:
   # Configure the first data source
   old: !!com.zaxxer.hikari.HikariDataSource
@@ -176,8 +174,11 @@ rules:
 
 执行速度我的机器只能跑到6w左右，不知道为什么这么慢，有时间还要再研究下写入速度这块，看别人的练习能跑到几十万甚至百万以上，从一开始的写入一亿行记录的速度来看，这个6w的速度也是太慢了，远没达到要求；  
 
-`43 finished. 44/5000, speed=6.44W/min
-44 finished. 45/5000, speed=6.44W/min`
+```
+# 写入日志：
+43 finished. 44/5000, speed=6.44W/min
+44 finished. 45/5000, speed=6.44W/min
+```
 
 
 **注意：** idea的application VM options设置为-Xmx4g -Xms4g；  
