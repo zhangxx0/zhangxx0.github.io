@@ -61,7 +61,7 @@ tags:
 [使用Nacos作为配置中心](https://blog.csdn.net/forezp/article/details/90729945)  
 
 项目中yml配置只需：
-```xml
+```yaml
 cloud:
   nacos:
     config:

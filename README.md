@@ -1,6 +1,6 @@
 #Zhangxx Blog
 
-###[View Zhangxx Blog &rarr;](http://amx1390.com)
+###[View Zhangxx Blog &rarr;](http://amx13105.xyz/)
 
 
 ## 功能说明

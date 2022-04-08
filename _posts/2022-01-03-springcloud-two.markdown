@@ -77,7 +77,7 @@ dashboard启动命令：
 java -Dserver.port=8748 -Dcsp.sentinel.dashboard.server=localhost:8748 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.2.jar
 ```
 
-**Sentinel** 和 **Feign** 的结合使用，以及和 **Gateway** 的限流搭配使用参考：
+**Sentinel** 和 **Feign** 的结合使用，以及和 **Gateway** 的限流搭配使用参考：  
 [SpringCloud 2020版本教程3：使用sentinel作为熔断器](https://forezp.blog.csdn.net/article/details/115632888)  
 [Sentinel/wiki/网关限流](https://github.com/alibaba/Sentinel/wiki/%E7%BD%91%E5%85%B3%E9%99%90%E6%B5%81)  
 [入门参考](https://github.com/alibaba/spring-cloud-alibaba/wiki/Sentinel)  
