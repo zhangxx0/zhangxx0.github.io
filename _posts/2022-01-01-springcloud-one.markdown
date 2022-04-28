@@ -138,5 +138,5 @@ Caused by: java.lang.IllegalStateException: No Feign Client for loadBalancing de
 
 **简单的画下这些服务的架构图：**  
 
-![简单的画个架构图](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-first-demo-framework.png)  
+![简单的画个架构图](http://zhangxx0.gitee.io/blog_image/springcloud/springcloud-first-demo-framework2.png)  
 
