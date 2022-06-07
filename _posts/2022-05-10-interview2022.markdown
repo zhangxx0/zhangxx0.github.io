@@ -10,7 +10,7 @@ tags:
     - 面试
 ---
 
-> 你相信死後得救
+> 小舟从此逝，江海寄余生。  
 
 
 ## 前言
@@ -29,12 +29,13 @@ tags:
 简历完善
 
 参考网站：  
-[JavaGuide（Java学习&&面试指南）]{https://javaguide.cn/}  
-[互联网 Java 工程师进阶知识完全扫盲]{https://doocs.github.io/advanced-java/#/}  
-[20+头部互联网公司面试总结及答案（Java方向）]{https://mp.weixin.qq.com/s/aaDIkYP-EOW3KjQ1RP4_3A}  
-[笑傲Java面试]{https://book.weavinghorse.com/smile-java/}  
+[JavaGuide（Java学习&&面试指南）](https://javaguide.cn/)  
+[互联网 Java 工程师进阶知识完全扫盲](https://doocs.github.io/advanced-java/#/)  
+[20+头部互联网公司面试总结及答案（Java方向）](https://mp.weixin.qq.com/s/aaDIkYP-EOW3KjQ1RP4_3A)  
+[笑傲Java面试](https://book.weavinghorse.com/smile-java/)  
+[To Be Top Javaer - Java工程师成神之路](https://github.com/hollischuang/toBeTopJavaer)  
 
-
+注：成神之路最近出了书，《深入理解Java核心技术》，大抵是把github的内容纸质化了；  
 
 
 ## 技术面试
