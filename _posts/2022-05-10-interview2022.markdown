@@ -18,7 +18,7 @@ tags:
 
 由于一些众所周知和不为人知的原因，在2022的上半年，换工作又提上了日程；  
 于是历经几个月的准备，之前也在研究 `Spring Cloud` 技术栈，终于在4月10号左右开始了今年的面试之旅，个人秉承少而精的原则，并没有漫天撒网，那样也没有什么意义，大多数的基本是浪费时间；  
-媒介使用boss直聘，这款软件也用了许多年了，比较好用；  
+媒介使用 **boss直聘**，这款软件也用了许多年了，比较好用；  
 青岛现有的软件公司分析（就不说互联网公司了），可参见下面这篇文章：  
 [青岛来了...]{https://mp.weixin.qq.com/s/v184tnK-JO61PdLHVFs5EA}  
 
@@ -32,6 +32,7 @@ tags:
 [JavaGuide（Java学习&&面试指南）](https://javaguide.cn/)  
 [互联网 Java 工程师进阶知识完全扫盲](https://doocs.github.io/advanced-java/#/)  
 [20+头部互联网公司面试总结及答案（Java方向）](https://mp.weixin.qq.com/s/aaDIkYP-EOW3KjQ1RP4_3A)  
+[yuanguangxin/LeetCode 面试问题整理](https://github.com/yuanguangxin/LeetCode/blob/master/Rocket.md)  
 [笑傲Java面试](https://book.weavinghorse.com/smile-java/)  
 [To Be Top Javaer - Java工程师成神之路](https://github.com/hollischuang/toBeTopJavaer)  
 
