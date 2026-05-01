@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: zxx377241804@gmail.com
 description: "程序员 | Zhangxx，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 Zhangxx 的个人博客"
 keyword: "张新鑫, Zhangxx, @酷比程序员一条, Zhangxx的博客, Zhangxx Blog, 博客, 个人网站, 互联网, 设计, 产品"
-url: "http://amx1390.com"              # your host, for absolute URL
+url: "http://amx1390.online"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 timezone: CN
